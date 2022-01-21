@@ -25,13 +25,6 @@
 </div>
 </p>
 
-## My other Work 
-All my Apple Apps (iOS) can be found [**here**](https://apps.apple.com/us/developer/paliverse-apps-llc/id949777640)
-<div align="left">
-  <h4 align="left">DualSenseM for macOS</h4>
-  <a href="https://apps.apple.com/us/app/dualsensem/id1598693570"><img src="imgs/macOSAppStoreButton.png" width="auto" height="70"/></a>
-</div>
-
 
 # Sobre o App
 ### Este Aplicativo somente funciona com o `DualSense do Playstation 5`
