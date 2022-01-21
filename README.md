@@ -7,13 +7,12 @@
      <a href="https://localazy.com/p/dualsensex" alt="langs">
           <img src="https://connect.localazy.com/status/dualsensex?&style=for-the-badge&content=langs" /></a>⠀
 <a href="https://github.com/Paliverse/DualSenseX/releases" alt="Contributors">
-          <img src="https://img.shields.io/github/downloads/Paliverse/DualSenseX/total.svg?style=for-the-badge&color=ffffff&logo=windows" /></a>⠀
+          <img src="https://github.com/josealissonbr/DualSenseAT/releases" /></a>⠀
 <a href="https://discord.gg/PUThpCFByn">
-          <img src="https://img.shields.io/discord/836790685784211486?logo=discord&label=Discord&style=for-the-badge&color=228B22"
-           alt="chat on Discord"></a>
+          
      </p>
 <div align="center">
-    <a href="https://github.com/Paliverse/DualSenseX/releases"><img src="imgs/DualSenseX_Icon.png" width="auto" height="300"/></a>
+    <a href="https://github.com/josealissonbr/DualSenseAT/releases"><img src="imgs/DualSenseX_Icon.png" width="auto" height="300"/></a>
 
 </div>
 
@@ -23,13 +22,11 @@
 
 
 <div align="center">
-  <h3 align="center">Current Goal: 1K Discord Members by end of 2021!ㅤ</h3>
+  <h3 align="center">Em breve donates serão aceitasㅤ</h3>
   <h3 align="center"></h3>
-<a href="https://www.paypal.com/paypalme/paliverse" alt="Contributors">
+<a href="https://www.google.con" alt="Contributors">
 <img src="https://img.shields.io/badge/PayPal-Support Me-red.svg?style=for-the-badge&color=ffffff&logo=PayPal" /></a>
   <mark>ㅤ</mark>
-<a href="https://ko-fi.com/L4L14MUFI" alt="Contributors">
-          <img src="https://img.shields.io/badge/ko fi-Support Me-red.svg?style=for-the-badge&color=ffffff&logo=Ko-fi" /></a>⠀
 </div>
 </p>
 
