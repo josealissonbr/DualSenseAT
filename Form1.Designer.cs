@@ -39,6 +39,7 @@ namespace DualSenseAT
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.procIdLabel = new System.Windows.Forms.Label();
+            this.debuglbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -54,11 +55,13 @@ namespace DualSenseAT
             // 
             this.gameList.FormattingEnabled = true;
             this.gameList.Items.AddRange(new object[] {
-            "Resident Evil 5 (Steam)"});
+            "Resident Evil 5 (Steam)",
+            "Euro Truck Simulator 2 (Steam)"});
             this.gameList.Location = new System.Drawing.Point(175, 147);
             this.gameList.Name = "gameList";
             this.gameList.Size = new System.Drawing.Size(195, 21);
             this.gameList.TabIndex = 2;
+            this.gameList.SelectedIndexChanged += new System.EventHandler(this.gameList_SelectedIndexChanged);
             // 
             // OnTime
             // 
@@ -138,11 +141,24 @@ namespace DualSenseAT
             this.procIdLabel.TabIndex = 38;
             this.procIdLabel.Text = "#";
             // 
+            // debuglbl
+            // 
+            this.debuglbl.AutoSize = true;
+            this.debuglbl.BackColor = System.Drawing.Color.Transparent;
+            this.debuglbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debuglbl.ForeColor = System.Drawing.Color.Black;
+            this.debuglbl.Location = new System.Drawing.Point(355, 232);
+            this.debuglbl.Name = "debuglbl";
+            this.debuglbl.Size = new System.Drawing.Size(67, 15);
+            this.debuglbl.TabIndex = 44;
+            this.debuglbl.Text = "Paused? ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 298);
+            this.Controls.Add(this.debuglbl);
             this.Controls.Add(this.gameProcessNameLabel);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.procOpenLabel);
@@ -171,6 +187,7 @@ namespace DualSenseAT
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label procIdLabel;
+        private System.Windows.Forms.Label debuglbl;
     }
 }
 

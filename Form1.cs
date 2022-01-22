@@ -1,4 +1,5 @@
-﻿using Memory;
+﻿using Ets2SdkClient;
+using Memory;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,12 +17,125 @@ namespace DualSenseAT
 {
     public partial class Form1 : Form
     {
+        public Ets2SdkTelemetry Telemetry;
+
         public Form1()
         {
             InitializeComponent();
+
+            Telemetry = new Ets2SdkTelemetry();
+            Telemetry.Data += Telemetry_Data;
+
+            Telemetry.JobFinished += TelemetryOnJobFinished;
+            Telemetry.JobStarted += TelemetryOnJobStarted;
+
+            if (Telemetry.Error != null)
+            {
+                //lbGeneral.Text =
+                    //"General info:\r\nFailed to open memory map " + Telemetry.Map +
+                      //  " - on some systems you need to run the client (this app) with elevated permissions, because e.g. you're running Steam/ETS2 with elevated permissions as well. .NET reported the following Exception:\r\n" +
+                      //  Telemetry.Error.Message + "\r\n\r\nStacktrace:\r\n" + Telemetry.Error.StackTrace;
+            }
         }
 
-        
+        private void TelemetryOnJobFinished(object sender, EventArgs args)
+        {
+            MessageBox.Show("Job finished, or at least unloaded nearby cargo destination.");
+        }
+
+        private void TelemetryOnJobStarted(object sender, EventArgs e)
+        {
+            MessageBox.Show("Just started job OR loaded game with active.");
+        }
+
+        private void Telemetry_Data(Ets2Telemetry data, bool updated)
+        {
+
+
+            try
+            {
+                if (this.InvokeRequired)
+                {
+                    this.Invoke(new TelemetryData(Telemetry_Data), new object[2] { data, updated });
+                    return;
+                }
+
+                if (gameList.SelectedIndex < 0 || gameList.SelectedItem.ToString() != "Euro Truck Simulator 2 (Steam)")
+                {
+                   // Controller.WriteController.ResetTrigger(Controller.Triggers.LeftTrigger);
+                   // Controller.WriteController.ResetTrigger(Controller.Triggers.RightTrigger);
+                    return;
+                }
+                   
+                debuglbl.Text = "Paused? " + data.Paused;
+
+
+                if (data.Paused)
+                {
+                    Controller.WriteController.ResetTrigger(Controller.Triggers.LeftTrigger);
+                    Controller.WriteController.ResetTrigger(Controller.Triggers.RightTrigger);
+                    return;
+                }
+                else {
+                    if (data.Drivetrain.SpeedKmh < 1)
+                    {
+                        Controller.WriteController.SetRightTrigger(Controller.Types.Resistance, "(0)(8)");
+                        Controller.WriteController.SetLeftTrigger(Controller.Types.Normal, "(0)(0)(0)(0)(0)(0)"); //0,9,4,3,19,2
+
+                    }
+                    else if (data.Drivetrain.SpeedKmh < 5)
+                    {
+                        Controller.WriteController.SetRightTrigger(Controller.Types.Resistance, "(0)(7)");
+                        Controller.WriteController.SetLeftTrigger(Controller.Types.Normal, "(0)(0)(0)(0)(0)(0)"); //0,9,4,3,19,2
+
+                    }
+
+                    else if (data.Drivetrain.SpeedKmh < 10)
+                    {
+                        Controller.WriteController.SetRightTrigger(Controller.Types.Resistance, "(0)(7)");
+                        Controller.WriteController.SetLeftTrigger(Controller.Types.Machine, "(0)(9)(4)(3)(19)(2)");
+
+                    }
+
+                    else if (data.Drivetrain.SpeedKmh < 15)
+                    {
+                        Controller.WriteController.SetRightTrigger(Controller.Types.Resistance, "(0)(6)");
+                        Controller.WriteController.SetLeftTrigger(Controller.Types.Machine, "(0)(9)(4)(3)(19)(2)");
+                    }
+                    else if (data.Drivetrain.SpeedKmh < 20)
+                    {
+                        Controller.WriteController.SetRightTrigger(Controller.Types.Resistance, "(0)(5)");
+                        Controller.WriteController.SetLeftTrigger(Controller.Types.Machine, "(0)(9)(4)(3)(19)(2)");
+                    }
+                    else if (data.Drivetrain.SpeedKmh < 25)
+                    {
+                        Controller.WriteController.SetRightTrigger(Controller.Types.Resistance, "(0)(4)");
+                        Controller.WriteController.SetLeftTrigger(Controller.Types.Machine, "(0)(9)(4)(3)(19)(2)");
+                    }
+                    else if (data.Drivetrain.SpeedKmh < 30)
+                    {
+                        Controller.WriteController.SetRightTrigger(Controller.Types.Resistance, "(0)(3)");
+                        Controller.WriteController.SetLeftTrigger(Controller.Types.Machine, "(0)(9)(4)(3)(19)(2)");
+                    }
+                    else if (data.Drivetrain.SpeedKmh < 35)
+                    {
+                        Controller.WriteController.SetRightTrigger(Controller.Types.Resistance, "(0)(2)");
+                        Controller.WriteController.SetRightTrigger(Controller.Types.Normal);
+                    }
+
+                    else if (data.Drivetrain.SpeedKmh < 40)
+                    {
+                        Controller.WriteController.SetRightTrigger(Controller.Types.Resistance, "(0)(1)");
+                        Controller.WriteController.SetRightTrigger(Controller.Types.Normal);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+
+
         private Mem memLib = new Mem();
 
         private int processID;
@@ -36,12 +150,21 @@ namespace DualSenseAT
             {
                 Normal = 1,
                 Hard = 2,
+                VeryHard = 3,
+                Machine = 4,
+                Resistance = 5,
             }
+            public enum Triggers
+            {
+                LeftTrigger = 1,
+                RightTrigger = 2,
+            }
+
             public struct WriteController
             {
-                public static void SetRightTrigger(Controller.Types type)
+                public static void SetRightTrigger(Controller.Types type, string customargs = "(0)(0)")
                 {
-                        var MyIni = new IniFile(@"C:\DualsenseX_GameTriggers.txt");
+                    var MyIni = new IniFile(@"C:\DualsenseX_GameTriggers.txt");
 
                     switch (type)
                     {
@@ -51,15 +174,58 @@ namespace DualSenseAT
                         case Controller.Types.Hard:
                             MyIni.Write("RightTrigger", "Hard");
                             break;
+                        case Controller.Types.VeryHard:
+                            MyIni.Write("RightTrigger", "VeryHard");
+                            break;
+                        case Controller.Types.Resistance:
+                            MyIni.Write("RightTrigger", "Resistance");
+                            MyIni.Write("ForceRightTrigger", customargs);
+                            break;
+                    }
+                }
+
+                public static void SetLeftTrigger(Controller.Types type, string customargs = "(0)(0)")
+                {
+                    var MyIni = new IniFile(@"C:\DualsenseX_GameTriggers.txt");
+
+                    switch (type)
+                    {
+                        case Controller.Types.Normal:
+                            MyIni.Write("LeftTrigger", "Normal");
+                            break;
+                        case Controller.Types.Hard:
+                            MyIni.Write("LeftTrigger", "Hard");
+                            break;
+                        case Controller.Types.VeryHard:
+                            MyIni.Write("LeftTrigger", "VeryHard");
+                            break;
+                        case Controller.Types.Machine:
+                            MyIni.Write("LeftTrigger", "Machine");
+                            MyIni.Write("ForceLeftTrigger", customargs);
+                            break;
+                    }
+                }
+
+                public static void ResetTrigger(Controller.Triggers trigger)
+                {
+                    var MyIni = new IniFile(@"C:\DualsenseX_GameTriggers.txt");
+                    switch (trigger)
+                    {
+                        case Controller.Triggers.LeftTrigger:
+                            MyIni.Write("RightTrigger", "Normal");
+                            break;
+                        case Controller.Triggers.RightTrigger:
+                            MyIni.Write("RightTrigger", "Normal");
+                            break;
                     }
                 }
             }
         }
 
 
-        private void findProcessID()
+        private void findProcessID(string procname)
         {
-            processID = memLib.GetProcIdFromName("re5dx9"); //Gets process ID
+            processID = memLib.GetProcIdFromName(procname); //Gets process ID
             processOpen = memLib.OpenProcess(processID);
 
             if (processID > 0)
@@ -71,7 +237,7 @@ namespace DualSenseAT
                 });
 
                 gameProcessNameLabel.Invoke((MethodInvoker)delegate {
-                    gameProcessNameLabel.Text = "re5dx9.exe";
+                    gameProcessNameLabel.Text = procname + ".exe";
                     gameProcessNameLabel.ForeColor = Color.Lime;
                 });
             }
@@ -111,16 +277,9 @@ namespace DualSenseAT
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
 
-            findProcessID();
+           
 
-            if (!processOpen)
-            {
-                MessageBox.Show("Falha ao encontrar o processo do jogo 're5dx9.exe'");
-                Thread.Sleep(1000);
-                return;
-            }
         }
 
         private void ResidentEvil5Steam()
@@ -154,6 +313,14 @@ namespace DualSenseAT
                 ResidentEvil5Steam();
 
             
+        }
+
+        private void gameList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (gameList.SelectedItem.ToString() == "Resident Evil 5 (Steam)")
+                findProcessID("re5dx9");
+            else if (gameList.SelectedItem.ToString() == "Euro Truck Simulator 2 (Steam)")
+                findProcessID("eurotrucks2");
         }
     }
 }

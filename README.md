@@ -54,6 +54,7 @@ Após seguir estes passos, voce estará com o DualSenseX, agora voce precisa bai
  
 ## **Jogos Suportados:**
 - Resident Evil 5 (Steam)
+- Euro Truck Simulator 2 (Steam) [Tutorial](https://github.com/josealissonbr/DualSenseAT/wiki/Tutorial-Para-Euro-Truck-Simulator-2)
 
 
 `A lista de jogos ainda é pouca, mas se voce tem conhecimento básico em Point Scanner usando Cheat Engine, voce pode adicionar qualquer jogo que quiser, Cuidado para não usar em jogos online ou com AntiCheat, pois o uso de Cheat Engine neles, pode ocasionar Banimento, por isso somente recomendo em jogos Offline.`
