@@ -37,7 +37,7 @@
       <HintPath>..\ets2-sdk-plugin\ets2-client\C#\Ets2SdkClient\bin\Debug\Ets2SdkClient.dll</HintPath>
     </Reference>
     <Reference Include="Memory">
-      <HintPath>C:\Users\teste\Documents\GitHub\Resident-Evil-5-Trainer\packages\Memory.dll.1.2.19\lib\net461\Memory.dll</HintPath>
+      <HintPath>.\Memory.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
