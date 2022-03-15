@@ -40,12 +40,12 @@ namespace DualSenseAT
 
         private void TelemetryOnJobFinished(object sender, EventArgs args)
         {
-            MessageBox.Show("Job finished, or at least unloaded nearby cargo destination.");
+            //MessageBox.Show("Job finished, or at least unloaded nearby cargo destination.");
         }
 
         private void TelemetryOnJobStarted(object sender, EventArgs e)
         {
-            MessageBox.Show("Just started job OR loaded game with active.");
+            //MessageBox.Show("Just started job OR loaded game with active.");
         }
 
         private void Telemetry_Data(Ets2Telemetry data, bool updated)
@@ -70,7 +70,7 @@ namespace DualSenseAT
                 debuglbl.Text = "Paused? " + data.Paused;
 
 
-                if (data.Paused)
+                if (data.Paused == true)
                 {
                     Controller.WriteController.ResetTrigger(Controller.Triggers.LeftTrigger);
                     Controller.WriteController.ResetTrigger(Controller.Triggers.RightTrigger);
@@ -212,7 +212,7 @@ namespace DualSenseAT
                     switch (trigger)
                     {
                         case Controller.Triggers.LeftTrigger:
-                            MyIni.Write("RightTrigger", "Normal");
+                            MyIni.Write("LeftTrigger", "Normal");
                             break;
                         case Controller.Triggers.RightTrigger:
                             MyIni.Write("RightTrigger", "Normal");
