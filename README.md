@@ -17,7 +17,7 @@
 
 
 <div align="center">
-  <h3 align="center">Em breve donates serão aceitasㅤ</h3>
+  <h3 align="center">Donations will be accepted soonㅤ</h3>
   <h3 align="center"></h3>
 <a href="https://www.google.con" alt="Contributors">
 <img src="https://img.shields.io/badge/PayPal-Support Me-red.svg?style=for-the-badge&color=ffffff&logo=PayPal" /></a>
@@ -26,36 +26,36 @@
 </p>
 
 
-# Sobre o App
-### Este Aplicativo somente funciona com o `DualSense do Playstation 5`
+# About the App
+### This App only works with `Playstation 5 DualSense`
 
-Com este app voce trás os recursos de Gatilhos Adptáveis (Adaptive Triggers) para jogos do PC.
+With this app you bring the resources of Adaptive Triggers (Adaptive Triggers) for PC games.
 
-Este programa utiliza API criada por Paliverse em seu projeto DualSenseX.
+This program uses API created by Paliverse in its DualSenseX project.
 
-## Como baixar e instalar
+## How to download and install
 
-Para usar os Gatilhos Adaptáveis voce precisa
+To use Adaptive Triggers you need
 
-* Baixar o **DualSenseX-Setup.zip** nas Assets [latest release](https://github.com/Paliverse/DualSenseX/releases/latest).  
-    * Para instalar, double-click `DualSenseX-Setup.exe`.
+* Download **DualSenseX-Setup.zip** from Assets [latest release](https://github.com/Paliverse/DualSenseX/releases/latest).
+     * To install, double-click `DualSenseX-Setup.exe`.
 
-* Voce precisar instalar o ViGEmBus Driver para que funcione:
-    * Download the latest `ViGEmBus` drivers from the [ViGEmBus release page](https://github.com/ViGEm/ViGEmBus/releases/latest).  
-    * To install, double-click `ViGEmBus_Setup_{version}.exe` and follow the instructions presented.
+* You need to install the ViGEmBus Driver for it to work:
+     * Download the latest `ViGEmBus` drivers from the [ViGEmBus release page](https://github.com/ViGEm/ViGEmBus/releases/latest).
+     * To install, double-click `ViGEmBus_Setup_{version}.exe` and follow the instructions presented.
     
-* HidHide Driver (Opcional):
-    * Baixa a ultima versão do `HidHide` drivers na [Página do HidHide](https://github.com/ViGEm/HidHide/releases/latest).  
-    * Para instalar double-click `HidHideMSI.msi` e siga as instrucões apresentadas.
-    * **LEMBRE-SE DE REINICIAR OC PC APÓS INSTALAR PARA QUE FUNCIONE**
+* HidHide Driver (Optional):
+     * Download the latest version of the `HidHide` drivers from [HidHide Page](https://github.com/ViGEm/HidHide/releases/latest).
+     * To install double-click `HidHideMSI.msi` and follow the instructions.
+     * **REMEMBER TO RESTART OC PC AFTER INSTALLING TO WORK**
 
 Após seguir estes passos, voce estará com o DualSenseX, agora voce precisa baixar o DualSenseAT
 
  
-## **Jogos Suportados:**
+## **Supported Games:**
 - Resident Evil 5 (Steam)
 - Euro Truck Simulator 2 (Steam) [Tutorial](https://github.com/josealissonbr/DualSenseAT/wiki/Tutorial-Para-Euro-Truck-Simulator-2)
 
 
-`A lista de jogos ainda é pouca, mas se voce tem conhecimento básico em Point Scanner usando Cheat Engine, voce pode adicionar qualquer jogo que quiser, Cuidado para não usar em jogos online ou com AntiCheat, pois o uso de Cheat Engine neles, pode ocasionar Banimento, por isso somente recomendo em jogos Offline.`
-**Este Aplicativo funciona como um Trainer, ele irá ler certos lugares da Memória do JOGO logo não deve usar em Jogos Online ou com AntiCheats, pois isso pode te banir.**
+`The list of games is still small, but if you have basic knowledge in Point Scanner using Cheat Engine, you can add any game you want, Be careful not to use it in online games or with AntiCheat, because the use of Cheat Engine in them, can cause Banishment, so I only recommend it in Offline games.`
+**This App works as a Trainer, it will read certain places in the GAME Memory so you should not use it in Online Games or with AntiCheats, as this may ban you.**

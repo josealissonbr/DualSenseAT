@@ -47,9 +47,9 @@ namespace DualSenseAT
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(172, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
+            this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Selecione o game";
+            this.label1.Text = "Select Game";
             // 
             // gameList
             // 

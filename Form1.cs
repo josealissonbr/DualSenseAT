@@ -260,7 +260,7 @@ namespace DualSenseAT
 
                 procOpenLabel.Invoke((MethodInvoker)delegate
                 {
-                    procOpenLabel.Text = "JOGO ENCONTRADO";
+                    procOpenLabel.Text = "GAME FOUND!";
                     procOpenLabel.ForeColor = Color.Lime;
                 });
 
@@ -277,8 +277,9 @@ namespace DualSenseAT
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (!File.Exists(@"C:\DualsenseX_GameTriggers.txt"))
+                File.Create(@"C:\DualsenseX_GameTriggers.txt");
 
-           
 
         }
 
