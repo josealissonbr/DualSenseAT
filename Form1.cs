@@ -301,7 +301,7 @@ namespace DualSenseAT
             else
                 Controller.WriteController.SetRightTrigger(Controller.Types.Normal);
 
-            Console.WriteLine("municao: " + ammo);
+            Console.WriteLine("Ammo: " + ammo);
         }
 
         private void OnTime_Tick(object sender, EventArgs e)
