@@ -71,6 +71,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\Console.cs" />
     <Compile Include="IniFile.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
