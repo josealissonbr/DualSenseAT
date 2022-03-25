@@ -19,18 +19,28 @@ namespace DualSenseAT
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
+            //Setup GamesTab
+            
+
+
+            //Init console log
             Functions.Console.log("Program Initialized!", this.consoleOutput);
-        }
-
-        private void metroListView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void metroTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
                 Functions.Console.HandleCmd(this.consoleOutput, this.consoleInputBox);
+        }
+
+        private void gameTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
