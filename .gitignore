@@ -20,3 +20,7 @@ obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
 .vs/DualSenseAT/v17/.suo
 *.cache
 obj/Debug/DualSenseAT.MainWindow.resources
+bin/Debug/MetroFramework.Fonts.dll
+bin/Debug/MetroFramework.Design.dll
+bin/Debug/MetroFramework.dll
+bin/Debug/Ets2SdkClient.dll

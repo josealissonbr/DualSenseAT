@@ -38,10 +38,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ets2SdkClient">
-      <HintPath>..\ets2-sdk-plugin\ets2-client\C#\Ets2SdkClient\bin\Debug\Ets2SdkClient.dll</HintPath>
+      <HintPath>dependencies\Ets2SdkClient.dll</HintPath>
     </Reference>
     <Reference Include="Memory">
-      <HintPath>.\Memory.dll</HintPath>
+      <HintPath>dependencies\Memory.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
