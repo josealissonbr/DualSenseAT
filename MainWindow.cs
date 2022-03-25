@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DualSenseAT
 {
-    public partial class MainWindow : MetroFramework.Forms.MetroForm
+    public partial class MainWindow : Form
     {
         public MainWindow()
         {
