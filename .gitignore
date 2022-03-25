@@ -18,3 +18,5 @@ obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 obj/Debug/DualSenseAT.csproj.AssemblyReference.cache
 obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
 .vs/DualSenseAT/v17/.suo
+*.cache
+obj/Debug/DualSenseAT.MainWindow.resources
