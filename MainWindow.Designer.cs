@@ -31,17 +31,17 @@
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.gamesTab = new MetroFramework.Controls.MetroTabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gamePicture = new System.Windows.Forms.PictureBox();
             this.gameLbl = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.settingsTab = new MetroFramework.Controls.MetroTabPage();
             this.debugTab = new MetroFramework.Controls.MetroTabPage();
             this.consoleInputBox = new MetroFramework.Controls.MetroTextBox();
             this.consoleOutput = new MetroFramework.Controls.MetroTextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.metroTabControl1.SuspendLayout();
             this.gamesTab.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gamePicture)).BeginInit();
             this.debugTab.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,21 +76,25 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.gamePicture);
             this.panel1.Controls.Add(this.gameLbl);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel1.Location = new System.Drawing.Point(228, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(540, 516);
             this.panel1.TabIndex = 3;
             // 
-            // pictureBox1
+            // gamePicture
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(533, 325);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.gamePicture.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gamePicture.Location = new System.Drawing.Point(3, 80);
+            this.gamePicture.Name = "gamePicture";
+            this.gamePicture.Size = new System.Drawing.Size(533, 325);
+            this.gamePicture.TabIndex = 1;
+            this.gamePicture.TabStop = false;
             // 
             // gameLbl
             // 
@@ -105,14 +109,29 @@
             this.gameLbl.Text = "label1";
             this.gameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Items.AddRange(new object[] {
+            "item1",
+            "item2"});
+            this.listBox1.Location = new System.Drawing.Point(3, 3);
+            this.listBox1.MinimumSize = new System.Drawing.Size(186, 434);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(219, 516);
+            this.listBox1.TabIndex = 2;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // settingsTab
             // 
             this.settingsTab.HorizontalScrollbarBarColor = true;
             this.settingsTab.HorizontalScrollbarHighlightOnWheel = false;
             this.settingsTab.HorizontalScrollbarSize = 10;
-            this.settingsTab.Location = new System.Drawing.Point(4, 38);
+            this.settingsTab.Location = new System.Drawing.Point(4, 35);
             this.settingsTab.Name = "settingsTab";
-            this.settingsTab.Size = new System.Drawing.Size(776, 519);
+            this.settingsTab.Size = new System.Drawing.Size(776, 522);
             this.settingsTab.TabIndex = 1;
             this.settingsTab.Text = "Settings";
             this.settingsTab.VerticalScrollbarBarColor = true;
@@ -126,9 +145,9 @@
             this.debugTab.HorizontalScrollbarBarColor = true;
             this.debugTab.HorizontalScrollbarHighlightOnWheel = false;
             this.debugTab.HorizontalScrollbarSize = 10;
-            this.debugTab.Location = new System.Drawing.Point(4, 38);
+            this.debugTab.Location = new System.Drawing.Point(4, 35);
             this.debugTab.Name = "debugTab";
-            this.debugTab.Size = new System.Drawing.Size(776, 519);
+            this.debugTab.Size = new System.Drawing.Size(776, 522);
             this.debugTab.TabIndex = 2;
             this.debugTab.Text = "Debug";
             this.debugTab.VerticalScrollbarBarColor = true;
@@ -207,21 +226,6 @@
             this.consoleOutput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.consoleOutput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Items.AddRange(new object[] {
-            "item1",
-            "item2"});
-            this.listBox1.Location = new System.Drawing.Point(3, 3);
-            this.listBox1.MinimumSize = new System.Drawing.Size(186, 434);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(219, 516);
-            this.listBox1.TabIndex = 2;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(784, 561);
@@ -233,7 +237,7 @@
             this.gamesTab.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gamePicture)).EndInit();
             this.debugTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -250,7 +254,7 @@
         private MetroFramework.Controls.MetroTextBox consoleOutput;
         private MetroFramework.Controls.MetroTextBox consoleInputBox;
         private System.Windows.Forms.Label gameLbl;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox gamePicture;
         private System.Windows.Forms.ListBox listBox1;
     }
 }

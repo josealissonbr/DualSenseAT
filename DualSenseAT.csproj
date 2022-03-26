@@ -68,12 +68,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\apiFunctions.cs" />
     <Compile Include="Functions\Console.cs" />
     <Compile Include="IniFile.cs" />
     <Compile Include="MainWindow.cs">
