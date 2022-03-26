@@ -26,3 +26,4 @@ bin/Debug/MetroFramework.dll
 bin/Debug/Ets2SdkClient.dll
 bin/Debug/Newtonsoft.Json.xml
 bin/Debug/Newtonsoft.Json.dll
+*.resources

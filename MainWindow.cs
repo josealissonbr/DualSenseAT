@@ -31,6 +31,22 @@ namespace DualSenseAT
            // Functions.Console.log(repojson["games"][index]["name"].ToString(), this.consoleOutput);
         }
 
+        private void LoadGameMod(int index)
+        {
+            Functions.Console.log("Loading Game: " + repojson["games"][index]["name"].ToString(), this.consoleOutput);
+            Functions.Console.log(repojson["games"][index].ToString(), this.consoleOutput);
+            Functions.Console.log("========================================================", this.consoleOutput);
+            gameloadDialog gameDialog = new gameloadDialog();
+            gameDialog.gameName = repojson["games"][index]["name"].ToString(); 
+            gameDialog.picture_url = repojson["games"][index]["picture_url"].ToString(); 
+            gameDialog.app_id = int.Parse(repojson["games"][index]["app_id"].ToString());
+            gameDialog.isSteamGame = bool.Parse(repojson["games"][index]["isSteamGame"].ToString());
+            gameDialog.StartPosition = FormStartPosition.Manual;
+            gameDialog.Location = new Point(this.Location.X + this.Width / 2, this.Location.Y + this.Height / 2);
+
+            gameDialog.ShowDialog();
+        }
+
         private void MainWindow_Load(object sender, EventArgs e)
         {
             //Setup GamesTab
@@ -61,6 +77,11 @@ namespace DualSenseAT
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             setgameWindow(listBox1.SelectedIndex);
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            LoadGameMod(listBox1.SelectedIndex);
         }
     }
 }

@@ -38,6 +38,7 @@
             this.debugTab = new MetroFramework.Controls.MetroTabPage();
             this.consoleInputBox = new MetroFramework.Controls.MetroTextBox();
             this.consoleOutput = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroTabControl1.SuspendLayout();
             this.gamesTab.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,12 +80,13 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.metroButton1);
             this.panel1.Controls.Add(this.gamePicture);
             this.panel1.Controls.Add(this.gameLbl);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel1.Location = new System.Drawing.Point(228, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(540, 516);
+            this.panel1.Size = new System.Drawing.Size(540, 513);
             this.panel1.TabIndex = 3;
             // 
             // gamePicture
@@ -226,6 +228,16 @@
             this.consoleOutput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.consoleOutput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(223, 434);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(96, 48);
+            this.metroButton1.TabIndex = 2;
+            this.metroButton1.Text = "Load Mod";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(784, 561);
@@ -256,5 +268,6 @@
         private System.Windows.Forms.Label gameLbl;
         private System.Windows.Forms.PictureBox gamePicture;
         private System.Windows.Forms.ListBox listBox1;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
