@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.IO.Compression;
@@ -41,6 +42,25 @@ namespace DualSenseAT
         {
             metroProgressBar1.ProgressBarStyle = ProgressBarStyle.Continuous;
             metroProgressBar1.Value = 0;
+
+            System.IO.DirectoryInfo di = new DirectoryInfo(Constants.TEMP_PATH + "\\" + app_id + "\\download\\");
+
+            try
+            {
+                foreach (FileInfo file in di.GetFiles())
+                {
+                    file.Delete();
+                }
+                foreach (DirectoryInfo dir in di.GetDirectories())
+                {
+                    dir.Delete(true);
+                }
+            }
+            catch (Exception ex) 
+            { 
+
+            }
+
             if (!Directory.Exists(Constants.TEMP_PATH + "\\" + app_id + "\\download\\"))
                 Directory.CreateDirectory(Constants.TEMP_PATH + "\\" + app_id + "\\download\\");
 
@@ -57,10 +77,12 @@ namespace DualSenseAT
             var json = File.ReadAllText(Constants.TEMP_PATH + "\\" + app_id + "\\download\\gameManifest.json");
             JObject manifest = JObject.Parse(json);
 
-            Console.WriteLine(manifest.ToString(Newtonsoft.Json.Formatting.Indented));
+            // MessageBox.Show(manifest.ToString(Newtonsoft.Json.Formatting.Indented));
 
             //Prepare .EXE Loading...
-
+            Clipboard.SetText(Constants.TEMP_PATH + "\\" + app_id + "\\download\\" + manifest["info"][0]["exec"]);
+            Process.Start(Constants.TEMP_PATH + "\\" + app_id + "\\download\\" + manifest["info"][0]["exec"]);
+            this.Close();
 
         }
 
@@ -75,13 +97,15 @@ namespace DualSenseAT
             metroProgressBar1.Value = 40;
             try
             {
+
                 ZipFile.ExtractToDirectory(Constants.TEMP_PATH + "\\" + app_id + "\\download\\pack_data.zip", Constants.TEMP_PATH + "\\" + app_id + "\\download");
                 metroProgressBar1.ProgressBarStyle = ProgressBarStyle.Continuous;
                 metroProgressBar1.Value = 100;
+                startMod();
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 

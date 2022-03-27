@@ -24,15 +24,19 @@ namespace DualSenseAT
 
         public void setgameWindow(int index)
         {
+            if (index == -1)
+                return;
             gameLbl.Text = repojson["games"][index]["name"].ToString();
             WebClient client = new WebClient();
             Stream stream_data = new MemoryStream(client.DownloadData(repojson["games"][index]["picture_url"].ToString()));
             gamePicture.Image = Image.FromStream(stream_data); 
-           // Functions.Console.log(repojson["games"][index]["name"].ToString(), this.consoleOutput);
         }
 
         private void LoadGameMod(int index)
         {
+            if (index == -1)
+                return;
+
             Functions.Console.log("Loading Game: " + repojson["games"][index]["name"].ToString(), this.consoleOutput);
             Functions.Console.log(repojson["games"][index].ToString(), this.consoleOutput);
             Functions.Console.log("========================================================", this.consoleOutput);
