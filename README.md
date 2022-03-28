@@ -45,11 +45,8 @@ To use Adaptive Triggers you need
      * Download the latest `ViGEmBus` drivers from the [ViGEmBus release page](https://github.com/ViGEm/ViGEmBus/releases/latest).
      * To install, double-click `ViGEmBus_Setup_{version}.exe` and follow the instructions presented.
     
-* HidHide Driver (Optional):
-     * Download the latest version of the `HidHide` drivers from [HidHide Page](https://github.com/ViGEm/HidHide/releases/latest).
-     * To install double-click `HidHideMSI.msi` and follow the instructions.
-     * **REMEMBER TO RESTART OC PC AFTER INSTALLING TO WORK**
-
+* Now download and install DualSenseAT
+     * Download The latest version from Assets
 Após seguir estes passos, voce estará com o DualSenseX, agora voce precisa baixar o DualSenseAT
 
  
