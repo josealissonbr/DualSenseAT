@@ -54,14 +54,25 @@ namespace DualSenseAT
 
         public void checkUpdates()
         {
+            Functions.Console.log("Checking Updates...", this.consoleOutput);
             JObject updateJson = Functions.apiFunctions.getUpdates();
-            Functions.Console.log(updateJson.ToString(), this.consoleOutput);
 
-            UpdateWindow updateW = new UpdateWindow();
-            updateW.updateJson = updateJson;
 
-            updateW.ShowDialog();
+            if (updateJson["update"][0]["code"].ToString() != Application.ProductVersion)
+            {
+                label1.Visible = true;
+                label1.Text = "New update found!";
+                Functions.Console.log("New Update found! (current: "+Application.ProductVersion+" new:"+updateJson["update"][0]["code"].ToString()+")", this.consoleOutput);
+                UpdateWindow updateW = new UpdateWindow();
+                updateW.updateJson = updateJson;
 
+                updateW.ShowDialog();
+            }
+            else
+            {
+                label1.Visible = true;
+                label1.Text = "You are using latest version!";
+            }
         }
 
 
@@ -71,6 +82,7 @@ namespace DualSenseAT
         {
 
             //Check updates
+            versionLbl.Text = "Current Version: v" + Application.ProductVersion;
             //checkUpdates();
             //Setup GamesTab
 
@@ -114,6 +126,16 @@ namespace DualSenseAT
                 //Dark mode exec code 
                 metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Dark;
             }
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            checkUpdates();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

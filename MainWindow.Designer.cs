@@ -38,6 +38,9 @@
             this.gameLbl = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.settingsTab = new MetroFramework.Controls.MetroTabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.versionLbl = new MetroFramework.Controls.MetroLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.setting_darkModeToggle = new MetroFramework.Controls.MetroToggle();
@@ -45,11 +48,13 @@
             this.consoleInputBox = new MetroFramework.Controls.MetroTextBox();
             this.consoleOutput = new MetroFramework.Controls.MetroTextBox();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.metroTabControl1.SuspendLayout();
             this.gamesTab.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gamePicture)).BeginInit();
             this.settingsTab.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.debugTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
@@ -66,6 +71,7 @@
             this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(784, 561);
             this.metroTabControl1.TabIndex = 0;
+            this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabControl1.UseSelectable = true;
             // 
             // gamesTab
@@ -80,6 +86,7 @@
             this.gamesTab.Size = new System.Drawing.Size(776, 522);
             this.gamesTab.TabIndex = 0;
             this.gamesTab.Text = "Games";
+            this.gamesTab.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.gamesTab.VerticalScrollbarBarColor = true;
             this.gamesTab.VerticalScrollbarHighlightOnWheel = false;
             this.gamesTab.VerticalScrollbarSize = 10;
@@ -89,13 +96,14 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.panel1.Controls.Add(this.metroButton1);
             this.panel1.Controls.Add(this.gamePicture);
             this.panel1.Controls.Add(this.gameLbl);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel1.Location = new System.Drawing.Point(228, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(540, 510);
+            this.panel1.Size = new System.Drawing.Size(540, 507);
             this.panel1.TabIndex = 3;
             // 
             // metroButton1
@@ -105,6 +113,7 @@
             this.metroButton1.Size = new System.Drawing.Size(96, 48);
             this.metroButton1.TabIndex = 2;
             this.metroButton1.Text = "Load Mod";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
@@ -122,6 +131,7 @@
             this.gameLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gameLbl.AutoSize = true;
             this.gameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.gameLbl.ForeColor = System.Drawing.Color.White;
             this.gameLbl.Location = new System.Drawing.Point(219, 28);
             this.gameLbl.MinimumSize = new System.Drawing.Size(100, 0);
             this.gameLbl.Name = "gameLbl";
@@ -132,7 +142,9 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Items.AddRange(new object[] {
@@ -147,6 +159,7 @@
             // 
             // settingsTab
             // 
+            this.settingsTab.Controls.Add(this.groupBox2);
             this.settingsTab.Controls.Add(this.groupBox1);
             this.settingsTab.HorizontalScrollbarBarColor = true;
             this.settingsTab.HorizontalScrollbarHighlightOnWheel = false;
@@ -156,14 +169,53 @@
             this.settingsTab.Size = new System.Drawing.Size(776, 519);
             this.settingsTab.TabIndex = 1;
             this.settingsTab.Text = "Settings";
+            this.settingsTab.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.settingsTab.VerticalScrollbarBarColor = true;
             this.settingsTab.VerticalScrollbarHighlightOnWheel = false;
             this.settingsTab.VerticalScrollbarSize = 10;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.metroButton2);
+            this.groupBox2.Controls.Add(this.versionLbl);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(18, 255);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(260, 217);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Updates";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(7, 54);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(247, 23);
+            this.metroButton2.TabIndex = 1;
+            this.metroButton2.Text = "Check Updates";
+            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // versionLbl
+            // 
+            this.versionLbl.AutoSize = true;
+            this.versionLbl.Location = new System.Drawing.Point(7, 32);
+            this.versionLbl.Name = "versionLbl";
+            this.versionLbl.Size = new System.Drawing.Size(126, 19);
+            this.versionLbl.TabIndex = 0;
+            this.versionLbl.Text = "Current version: v0.1";
+            this.versionLbl.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.setting_darkModeToggle);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(18, 19);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(260, 217);
@@ -179,6 +231,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(75, 19);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Dark mode";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // setting_darkModeToggle
             // 
@@ -188,6 +241,7 @@
             this.setting_darkModeToggle.Size = new System.Drawing.Size(80, 17);
             this.setting_darkModeToggle.TabIndex = 1;
             this.setting_darkModeToggle.Text = "Off";
+            this.setting_darkModeToggle.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.setting_darkModeToggle.UseSelectable = true;
             this.setting_darkModeToggle.CheckedChanged += new System.EventHandler(this.metroToggle1_CheckedChanged);
             // 
@@ -203,6 +257,7 @@
             this.debugTab.Size = new System.Drawing.Size(776, 522);
             this.debugTab.TabIndex = 2;
             this.debugTab.Text = "Debug";
+            this.debugTab.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.debugTab.VerticalScrollbarBarColor = true;
             this.debugTab.VerticalScrollbarHighlightOnWheel = false;
             this.debugTab.VerticalScrollbarSize = 10;
@@ -215,7 +270,7 @@
             // 
             // 
             this.consoleInputBox.CustomButton.Image = null;
-            this.consoleInputBox.CustomButton.Location = new System.Drawing.Point(631, 1);
+            this.consoleInputBox.CustomButton.Location = new System.Drawing.Point(738, 1);
             this.consoleInputBox.CustomButton.Name = "";
             this.consoleInputBox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.consoleInputBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -224,7 +279,7 @@
             this.consoleInputBox.CustomButton.UseSelectable = true;
             this.consoleInputBox.CustomButton.Visible = false;
             this.consoleInputBox.Lines = new string[0];
-            this.consoleInputBox.Location = new System.Drawing.Point(8, 416);
+            this.consoleInputBox.Location = new System.Drawing.Point(8, 488);
             this.consoleInputBox.MaxLength = 32767;
             this.consoleInputBox.Name = "consoleInputBox";
             this.consoleInputBox.PasswordChar = '\0';
@@ -234,8 +289,9 @@
             this.consoleInputBox.SelectionLength = 0;
             this.consoleInputBox.SelectionStart = 0;
             this.consoleInputBox.ShortcutsEnabled = true;
-            this.consoleInputBox.Size = new System.Drawing.Size(653, 23);
+            this.consoleInputBox.Size = new System.Drawing.Size(760, 23);
             this.consoleInputBox.TabIndex = 2;
+            this.consoleInputBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.consoleInputBox.UseSelectable = true;
             this.consoleInputBox.WaterMark = "Enter command";
             this.consoleInputBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -251,9 +307,9 @@
             // 
             // 
             this.consoleOutput.CustomButton.Image = null;
-            this.consoleOutput.CustomButton.Location = new System.Drawing.Point(247, 1);
+            this.consoleOutput.CustomButton.Location = new System.Drawing.Point(292, 1);
             this.consoleOutput.CustomButton.Name = "";
-            this.consoleOutput.CustomButton.Size = new System.Drawing.Size(405, 405);
+            this.consoleOutput.CustomButton.Size = new System.Drawing.Size(467, 467);
             this.consoleOutput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.consoleOutput.CustomButton.TabIndex = 1;
             this.consoleOutput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -272,9 +328,10 @@
             this.consoleOutput.SelectionLength = 0;
             this.consoleOutput.SelectionStart = 0;
             this.consoleOutput.ShortcutsEnabled = false;
-            this.consoleOutput.Size = new System.Drawing.Size(653, 407);
+            this.consoleOutput.Size = new System.Drawing.Size(760, 469);
             this.consoleOutput.TabIndex = 3;
             this.consoleOutput.Text = "DualSense AT - 2022 by JoseAlissonBR";
+            this.consoleOutput.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.consoleOutput.UseSelectable = true;
             this.consoleOutput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.consoleOutput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -282,6 +339,16 @@
             // metroStyleManager1
             // 
             this.metroStyleManager1.Owner = null;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
             // 
             // MainWindow
             // 
@@ -298,6 +365,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gamePicture)).EndInit();
             this.settingsTab.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.debugTab.ResumeLayout(false);
@@ -324,5 +393,9 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroToggle setting_darkModeToggle;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private MetroFramework.Controls.MetroLabel versionLbl;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private System.Windows.Forms.Label label1;
     }
 }
