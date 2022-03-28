@@ -80,7 +80,7 @@ namespace DualSenseAT
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-
+            
             //Check updates
             versionLbl.Text = "Current Version: v" + Application.ProductVersion;
             //checkUpdates();
@@ -96,6 +96,10 @@ namespace DualSenseAT
 
             }
             Functions.Console.log("Program Initialized!", this.consoleOutput);
+
+            //Fix index issues
+            metroTabControl1.SelectedIndex = 0;
+            listBox1.SelectedIndex = 0;
         }
 
         private void metroTextBox1_KeyPress(object sender, KeyPressEventArgs e)
