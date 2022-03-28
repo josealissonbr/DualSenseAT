@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gameloadDialog));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
@@ -84,13 +85,14 @@
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(354, 262);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(354, 262);
             this.Name = "gameloadDialog";
             this.ShowInTaskbar = false;
-            this.Text = "gameloadDialog";
+            this.Text = "Setting up for the game";
             this.Load += new System.EventHandler(this.gameloadDialog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

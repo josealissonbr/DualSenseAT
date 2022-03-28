@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.gamesTab = new MetroFramework.Controls.MetroTabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -286,7 +287,9 @@
             // 
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.metroTabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DualSense AT";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.metroTabControl1.ResumeLayout(false);

@@ -36,6 +36,9 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>dualsense-logo-3AB110CC79-seeklogo.com.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ets2SdkClient">
       <HintPath>dependencies\Ets2SdkClient.dll</HintPath>
@@ -148,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-divisa-circulada-à-direita-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dualsense-logo-3AB110CC79-seeklogo.com.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
