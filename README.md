@@ -8,7 +8,7 @@
      
 <div align="center">
     
-<a href="https://github.com/josealissonbr/DualSenseAT/releases"><img src="https://img.shields.io/github/downloads/atom/atom/total.svg" style="max-width: 100%;" /></a>
+<a href="https://github.com/josealissonbr/DualSenseAT/releases"><img src="https://img.shields.io/github/downloads/josealissonbr/DualSenseAT/total.svg" style="max-width: 100%;" /></a>
 
 </div>
 
