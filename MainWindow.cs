@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using MetroFramework.Controls;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -86,6 +87,15 @@ namespace DualSenseAT
         private void metroButton1_Click(object sender, EventArgs e)
         {
             LoadGameMod(listBox1.SelectedIndex);
+        }
+
+        private void metroToggle1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (setting_darkModeToggle.Checked)
+            {
+                //Dark mode exec code 
+                metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            }
         }
     }
 }
