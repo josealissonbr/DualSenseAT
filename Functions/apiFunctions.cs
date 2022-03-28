@@ -18,5 +18,14 @@ namespace DualSenseAT.Functions
 
             return o;
         }
+
+        public static JObject getUpdates()
+        {
+            WebClient client = new WebClient();
+            var json = client.DownloadString(Constants.BASE_URL + "/updater/updateSettings.json");
+            JObject o = JObject.Parse(json);
+
+            return o;
+        }
     }
 }

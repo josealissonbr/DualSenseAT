@@ -39,8 +39,8 @@ namespace DualSenseAT
                 return;
 
             Functions.Console.log("Loading Game: " + repojson["games"][index]["name"].ToString(), this.consoleOutput);
-            Functions.Console.log(repojson["games"][index].ToString(), this.consoleOutput);
-            Functions.Console.log("========================================================", this.consoleOutput);
+            // Functions.Console.log(repojson["games"][index].ToString(), this.consoleOutput);
+           // Functions.Console.log("========================================================", this.consoleOutput);
             gameloadDialog gameDialog = new gameloadDialog();
             gameDialog.gameName = repojson["games"][index]["name"].ToString(); 
             gameDialog.picture_url = repojson["games"][index]["picture_url"].ToString(); 
@@ -52,8 +52,26 @@ namespace DualSenseAT
             gameDialog.ShowDialog();
         }
 
+        public void checkUpdates()
+        {
+            JObject updateJson = Functions.apiFunctions.getUpdates();
+            Functions.Console.log(updateJson.ToString(), this.consoleOutput);
+
+            UpdateWindow updateW = new UpdateWindow();
+            updateW.updateJson = updateJson;
+
+            updateW.ShowDialog();
+
+        }
+
+
+
+
         private void MainWindow_Load(object sender, EventArgs e)
         {
+
+            //Check updates
+            //checkUpdates();
             //Setup GamesTab
 
             Functions.Console.log("Setting up games tab...", this.consoleOutput);
