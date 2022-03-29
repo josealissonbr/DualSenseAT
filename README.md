@@ -18,9 +18,8 @@
 
 
 <div align="center">
-  <h3 align="center">Donations will be accepted soonㅤ</h3>
   <h3 align="center"></h3>
-<a href="https://www.google.con" alt="Contributors">
+<a href="https://www.paypal.com/donate/?hosted_button_id=N576WTARWPCFC" alt="Contributors">
 <img src="https://img.shields.io/badge/PayPal-Support Me-red.svg?style=for-the-badge&color=ffffff&logo=PayPal" /></a>
   <mark>ㅤ</mark>
 </div>
