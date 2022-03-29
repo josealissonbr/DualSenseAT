@@ -53,6 +53,7 @@ Após seguir estes passos, voce estará com o DualSenseX, agora voce precisa bai
 ## **Supported Games:**
 - Resident Evil 5 (Steam)
 - Euro Truck Simulator 2 (Steam)
+- God Of War
 - Rocket League
 - Death Stranding
 - Resident Evil 5
