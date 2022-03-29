@@ -59,4 +59,4 @@ Após seguir estes passos, voce estará com o DualSenseX, agora voce precisa bai
 - Resident Evil 5
 - Resident Evil 4
 
-`This Application uses ReadProcessMemory (RPM) in some games to read Game data.`
+`This Application uses ReadProcessMemory (RPM) in some games to read Game data, there have never been any cases of bans in the game so if something like that happens, let us know`
