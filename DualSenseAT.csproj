@@ -144,12 +144,6 @@
     <Compile Include="SetupWindow.Designer.cs">
       <DependentUpon>SetupWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="SplashWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SplashWindow.Designer.cs">
-      <DependentUpon>SplashWindow.cs</DependentUpon>
-    </Compile>
     <Compile Include="uc\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
@@ -184,9 +178,6 @@
     </Compile>
     <EmbeddedResource Include="SetupWindow.resx">
       <DependentUpon>SetupWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SplashWindow.resx">
-      <DependentUpon>SplashWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateWindow.resx">
       <DependentUpon>UpdateWindow.cs</DependentUpon>
