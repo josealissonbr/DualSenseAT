@@ -1,13 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.IO.Compression;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DualSenseAT
 {
+
     static class Program
     {
+
+        public static void RunSetup()
+        {
+            using (WebClient wclient = new WebClient())
+            {
+                wclient.DownloadFile(Constants.BASE_URL + "\\Localizations.zip", Constants.TEMP_PATH + "\\Localizations.zip");
+                try
+                {
+                    ZipFile.ExtractToDirectory(Constants.TEMP_PATH + "\\Localizations.zip", Constants.LANG_PATH);
+                }
+                catch
+                {
+
+                }
+            }
+
+            Application.Run(new SetupWindow());
+        }
+
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
@@ -21,8 +44,32 @@ namespace DualSenseAT
             UserPreferences.LANG_CODE = "en_US";
 #endif
 
+            
 
-            Application.Run(new SetupWindow());
+
+            if (!Directory.Exists(Constants.BASE_TEMP_PATH))
+            {
+                Directory.CreateDirectory(Constants.BASE_TEMP_PATH);
+
+                RunSetup();
+            }
+            else
+            {
+
+                var Settings = new IniFile(Constants.TEMP_PATH + "\\DualSenseAT_settings.ini");
+
+                if (Settings.Read("is_installed") == "true")
+                {
+                    Application.Run(new Main2Window());
+                }
+                else
+                {
+                    RunSetup();
+                }
+                
+            }
+
+            
         }
     }
 }

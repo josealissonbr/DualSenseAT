@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetupWindow));
             this.TitleLbl = new System.Windows.Forms.Label();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.langCBox = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.atButton1 = new DualSenseAT.ExtraControls.ATButton();
@@ -52,18 +52,18 @@
             this.TitleLbl.TabIndex = 0;
             this.TitleLbl.Text = "DualSenseAT";
             // 
-            // metroComboBox1
+            // langCBox
             // 
-            this.metroComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.metroComboBox1.ForeColor = System.Drawing.Color.White;
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(363, 406);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(301, 29);
-            this.metroComboBox1.TabIndex = 4;
-            this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroComboBox1.UseSelectable = true;
+            this.langCBox.BackColor = System.Drawing.Color.Transparent;
+            this.langCBox.ForeColor = System.Drawing.Color.White;
+            this.langCBox.FormattingEnabled = true;
+            this.langCBox.ItemHeight = 23;
+            this.langCBox.Location = new System.Drawing.Point(363, 406);
+            this.langCBox.Name = "langCBox";
+            this.langCBox.Size = new System.Drawing.Size(301, 29);
+            this.langCBox.TabIndex = 4;
+            this.langCBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.langCBox.UseSelectable = true;
             // 
             // metroLabel1
             // 
@@ -123,7 +123,7 @@
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.langCBox);
             this.Controls.Add(this.atButton1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TitleLbl);
@@ -173,7 +173,7 @@
         private System.Windows.Forms.Label TitleLbl;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ExtraControls.ATButton atButton1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox langCBox;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
