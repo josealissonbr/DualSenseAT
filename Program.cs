@@ -16,7 +16,13 @@ namespace DualSenseAT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainWindow());
+#if (DEBUG)
+            //Set Default Lang for Debug
+            UserPreferences.LANG_CODE = "en_US";
+#endif
+
+
+            Application.Run(new SetupWindow());
         }
     }
 }

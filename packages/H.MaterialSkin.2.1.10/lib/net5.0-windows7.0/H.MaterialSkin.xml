@@ -1,0 +1,894 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>H.MaterialSkin</name>
+    </assembly>
+    <members>
+        <member name="T:MaterialSkin.Animations.AnimationDirection">
+            <summary>
+            Defines the AnimationDirection
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationDirection.In">
+            <summary>
+            Defines the In
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationDirection.Out">
+            <summary>
+            Defines the Out
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationDirection.InOutIn">
+            <summary>
+            Defines the InOutIn
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationDirection.InOutOut">
+            <summary>
+            Defines the InOutOut
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationDirection.InOutRepeatingIn">
+            <summary>
+            Defines the InOutRepeatingIn
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationDirection.InOutRepeatingOut">
+            <summary>
+            Defines the InOutRepeatingOut
+            </summary>
+        </member>
+        <member name="T:MaterialSkin.Animations.AnimationManager">
+            <summary>
+            Defines the <see cref="T:MaterialSkin.Animations.AnimationManager" />
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Animations.AnimationManager.InterruptAnimation">
+            <summary>
+            Gets or sets a value indicating whether InterruptAnimation
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Animations.AnimationManager.Increment">
+            <summary>
+            Gets or sets the Increment
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Animations.AnimationManager.SecondaryIncrement">
+            <summary>
+            Gets or sets the SecondaryIncrement
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Animations.AnimationManager.AnimationType">
+            <summary>
+            Gets or sets the AnimationType
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Animations.AnimationManager.Singular">
+            <summary>
+            Gets or sets a value indicating whether Singular
+            </summary>
+        </member>
+        <member name="T:MaterialSkin.Animations.AnimationManager.AnimationFinished">
+            <summary>
+            The AnimationFinished
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/></param>
+        </member>
+        <member name="E:MaterialSkin.Animations.AnimationManager.OnAnimationFinished">
+            <summary>
+            Defines the OnAnimationFinished
+            </summary>
+        </member>
+        <member name="T:MaterialSkin.Animations.AnimationManager.AnimationProgress">
+            <summary>
+            The AnimationProgress
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/></param>
+        </member>
+        <member name="E:MaterialSkin.Animations.AnimationManager.OnAnimationProgress">
+            <summary>
+            Defines the OnAnimationProgress
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationManager._animationProgresses">
+            <summary>
+            Defines the _animationProgresses
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationManager._animationSources">
+            <summary>
+            Defines the _animationSources
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationManager._animationDirections">
+            <summary>
+            Defines the _animationDirections
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationManager._animationDatas">
+            <summary>
+            Defines the _animationDatas
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationManager.MIN_VALUE">
+            <summary>
+            Defines the MIN_VALUE
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationManager.MAX_VALUE">
+            <summary>
+            Defines the MAX_VALUE
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationManager._animationTimer">
+            <summary>
+            Defines the _animationTimer
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MaterialSkin.Animations.AnimationManager"/> class.
+            </summary>
+            <param name="singular">If true, only one animation is supported. The current animation will be replaced with the new one. If false, a new animation is added to the list.</param>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.AnimationTimerOnTick(System.Object,System.EventArgs)">
+            <summary>
+            The AnimationTimerOnTick
+            </summary>
+            <param name="sender">The sender<see cref="T:System.Object"/></param>
+            <param name="eventArgs">The eventArgs<see cref="T:System.EventArgs"/></param>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.IsAnimating">
+            <summary>
+            The IsAnimating
+            </summary>
+            <returns>The <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.StartNewAnimation(MaterialSkin.Animations.AnimationDirection,System.Object[])">
+            <summary>
+            The StartNewAnimation
+            </summary>
+            <param name="animationDirection">The animationDirection<see cref="T:MaterialSkin.Animations.AnimationDirection"/></param>
+            <param name="data">The data</param>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.StartNewAnimation(MaterialSkin.Animations.AnimationDirection,System.Drawing.Point,System.Object[])">
+            <summary>
+            The StartNewAnimation
+            </summary>
+            <param name="animationDirection">The animationDirection<see cref="T:MaterialSkin.Animations.AnimationDirection"/></param>
+            <param name="animationSource">The animationSource<see cref="T:System.Drawing.Point"/></param>
+            <param name="data">The data</param>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.UpdateProgress(System.Int32)">
+            <summary>
+            The UpdateProgress
+            </summary>
+            <param name="index">The index<see cref="T:System.Int32"/></param>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.IncrementProgress(System.Int32)">
+            <summary>
+            The IncrementProgress
+            </summary>
+            <param name="index">The index<see cref="T:System.Int32"/></param>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.DecrementProgress(System.Int32)">
+            <summary>
+            The DecrementProgress
+            </summary>
+            <param name="index">The index<see cref="T:System.Int32"/></param>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.GetProgress">
+            <summary>
+            The GetProgress
+            </summary>
+            <returns>The <see cref="T:System.Double"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.GetProgress(System.Int32)">
+            <summary>
+            The GetProgress
+            </summary>
+            <param name="index">The index<see cref="T:System.Int32"/></param>
+            <returns>The <see cref="T:System.Double"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.GetSource(System.Int32)">
+            <summary>
+            The GetSource
+            </summary>
+            <param name="index">The index<see cref="T:System.Int32"/></param>
+            <returns>The <see cref="T:System.Drawing.Point"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.GetSource">
+            <summary>
+            The GetSource
+            </summary>
+            <returns>The <see cref="T:System.Drawing.Point"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.GetDirection">
+            <summary>
+            The GetDirection
+            </summary>
+            <returns>The <see cref="T:MaterialSkin.Animations.AnimationDirection"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.GetDirection(System.Int32)">
+            <summary>
+            The GetDirection
+            </summary>
+            <param name="index">The index<see cref="T:System.Int32"/></param>
+            <returns>The <see cref="T:MaterialSkin.Animations.AnimationDirection"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.GetData">
+            <summary>
+            The GetData
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.GetData(System.Int32)">
+            <summary>
+            The GetData
+            </summary>
+            <param name="index">The index<see cref="T:System.Int32"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.GetAnimationCount">
+            <summary>
+            The GetAnimationCount
+            </summary>
+            <returns>The <see cref="T:System.Int32"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.SetProgress(System.Double)">
+            <summary>
+            The SetProgress
+            </summary>
+            <param name="progress">The progress<see cref="T:System.Double"/></param>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.SetDirection(MaterialSkin.Animations.AnimationDirection)">
+            <summary>
+            The SetDirection
+            </summary>
+            <param name="direction">The direction<see cref="T:MaterialSkin.Animations.AnimationDirection"/></param>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationManager.SetData(System.Object[])">
+            <summary>
+            The SetData
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:MaterialSkin.Animations.AnimationType">
+            <summary>
+            Defines the AnimationType
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationType.Linear">
+            <summary>
+            Defines the Linear
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationType.EaseInOut">
+            <summary>
+            Defines the EaseInOut
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationType.EaseOut">
+            <summary>
+            Defines the EaseOut
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationType.CustomQuadratic">
+            <summary>
+            Defines the CustomQuadratic
+            </summary>
+        </member>
+        <member name="T:MaterialSkin.Animations.AnimationLinear">
+            <summary>
+            Defines the <see cref="T:MaterialSkin.Animations.AnimationLinear" />
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationLinear.CalculateProgress(System.Double)">
+            <summary>
+            The CalculateProgress
+            </summary>
+            <param name="progress">The progress<see cref="T:System.Double"/></param>
+            <returns>The <see cref="T:System.Double"/></returns>
+        </member>
+        <member name="T:MaterialSkin.Animations.AnimationEaseInOut">
+            <summary>
+            Defines the <see cref="T:MaterialSkin.Animations.AnimationEaseInOut" />
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationEaseInOut.PI">
+            <summary>
+            Defines the PI
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Animations.AnimationEaseInOut.PI_HALF">
+            <summary>
+            Defines the PI_HALF
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationEaseInOut.CalculateProgress(System.Double)">
+            <summary>
+            The CalculateProgress
+            </summary>
+            <param name="progress">The progress<see cref="T:System.Double"/></param>
+            <returns>The <see cref="T:System.Double"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationEaseInOut.EaseInOut(System.Double)">
+            <summary>
+            The EaseInOut
+            </summary>
+            <param name="s">The s<see cref="T:System.Double"/></param>
+            <returns>The <see cref="T:System.Double"/></returns>
+        </member>
+        <member name="T:MaterialSkin.Animations.AnimationEaseOut">
+            <summary>
+            Defines the <see cref="T:MaterialSkin.Animations.AnimationEaseOut" />
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationEaseOut.CalculateProgress(System.Double)">
+            <summary>
+            The CalculateProgress
+            </summary>
+            <param name="progress">The progress<see cref="T:System.Double"/></param>
+            <returns>The <see cref="T:System.Double"/></returns>
+        </member>
+        <member name="T:MaterialSkin.Animations.AnimationCustomQuadratic">
+            <summary>
+            Defines the <see cref="T:MaterialSkin.Animations.AnimationCustomQuadratic" />
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.Animations.AnimationCustomQuadratic.CalculateProgress(System.Double)">
+            <summary>
+            The CalculateProgress
+            </summary>
+            <param name="progress">The progress<see cref="T:System.Double"/></param>
+            <returns>The <see cref="T:System.Double"/></returns>
+        </member>
+        <member name="M:MaterialSkin.ColorHelper.Lighten(System.Drawing.Color,System.Single)">
+            <summary>
+            Tints the color by the given percent.
+            </summary>
+            <param name="color">The color being tinted.</param>
+            <param name="percent">The percent to tint. Ex: 0.1 will make the color 10% lighter.</param>
+            <returns>The new tinted color.</returns>
+        </member>
+        <member name="M:MaterialSkin.ColorHelper.Darken(System.Drawing.Color,System.Single)">
+            <summary>
+            Tints the color by the given percent.
+            </summary>
+            <param name="color">The color being tinted.</param>
+            <param name="percent">The percent to tint. Ex: 0.1 will make the color 10% darker.</param>
+            <returns>The new tinted color.</returns>
+        </member>
+        <member name="M:MaterialSkin.ColorHelper.FromHsl(System.Int32,System.Single,System.Single,System.Single)">
+            <summary>
+            Converts the HSL values to a Color.
+            </summary>
+            <param name="alpha">The alpha.</param>
+            <param name="hue">The hue.</param>
+            <param name="saturation">The saturation.</param>
+            <param name="lighting">The lighting.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialSkin.Controls.FlexibleMaterialForm">
+            <summary>
+            The form to show the customized message box.
+            It is defined as an internal class to keep the public interface of the FlexibleMessageBox clean.
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.FONT">
+             <summary>
+             Defines the font for all FlexibleMessageBox instances.
+            
+             Default is: SystemFonts.MessageBoxFont
+             </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.MAX_WIDTH_FACTOR">
+             <summary>
+             Defines the maximum width for all FlexibleMessageBox instances in percent of the working area.
+            
+             Allowed values are 0.2 - 1.0 where:
+             0.2 means:  The FlexibleMessageBox can be at most half as wide as the working area.
+             1.0 means:  The FlexibleMessageBox can be as wide as the working area.
+            
+             Default is: 70% of the working area width.
+             </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.MAX_HEIGHT_FACTOR">
+             <summary>
+             Defines the maximum height for all FlexibleMessageBox instances in percent of the working area.
+            
+             Allowed values are 0.2 - 1.0 where:
+             0.2 means:  The FlexibleMessageBox can be at most half as high as the working area.
+             1.0 means:  The FlexibleMessageBox can be as high as the working area.
+            
+             Default is: 90% of the working area height.
+             </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.components">
+            <summary>
+            Erforderliche Designervariable.
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.Dispose(System.Boolean)">
+            <summary>
+            Verwendete Ressourcen bereinigen.
+            </summary>
+            <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.InitializeComponent">
+            <summary>
+            Erforderliche Methode für die Designerunterstützung.
+            Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.FlexibleMaterialFormBindingSource">
+            <summary>
+            Defines the FlexibleMaterialFormBindingSource
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.messageContainer">
+            <summary>
+            Defines the panel1
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.pictureBoxForIcon">
+            <summary>
+            Defines the pictureBoxForIcon
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.STANDARD_MESSAGEBOX_SEPARATOR_LINES">
+            <summary>
+            Defines the STANDARD_MESSAGEBOX_SEPARATOR_LINES
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.STANDARD_MESSAGEBOX_SEPARATOR_SPACES">
+            <summary>
+            Defines the STANDARD_MESSAGEBOX_SEPARATOR_SPACES
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.ButtonID.OK">
+            <summary>
+            Defines the OK
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.ButtonID.CANCEL">
+            <summary>
+            Defines the CANCEL
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.ButtonID.YES">
+            <summary>
+            Defines the YES
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.ButtonID.NO">
+            <summary>
+            Defines the NO
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.ButtonID.ABORT">
+            <summary>
+            Defines the ABORT
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.ButtonID.RETRY">
+            <summary>
+            Defines the RETRY
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.ButtonID.IGNORE">
+            <summary>
+            Defines the IGNORE
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.TwoLetterISOLanguageID.en">
+            <summary>
+            Defines the en
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.TwoLetterISOLanguageID.de">
+            <summary>
+            Defines the de
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.TwoLetterISOLanguageID.es">
+            <summary>
+            Defines the es
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.TwoLetterISOLanguageID.it">
+            <summary>
+            Defines the it
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.BUTTON_TEXTS_ENGLISH_EN">
+            <summary>
+            Defines the BUTTON_TEXTS_ENGLISH_EN
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.BUTTON_TEXTS_GERMAN_DE">
+            <summary>
+            Defines the BUTTON_TEXTS_GERMAN_DE
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.BUTTON_TEXTS_SPANISH_ES">
+            <summary>
+            Defines the BUTTON_TEXTS_SPANISH_ES
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.BUTTON_TEXTS_ITALIAN_IT">
+            <summary>
+            Defines the BUTTON_TEXTS_ITALIAN_IT
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.defaultButton">
+            <summary>
+            Defines the defaultButton
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.visibleButtonsCount">
+            <summary>
+            Defines the visibleButtonsCount
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.FlexibleMaterialForm.languageID">
+            <summary>
+            Defines the languageID
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:MaterialSkin.Controls.FlexibleMaterialForm"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.GetStringRows(System.String)">
+            <summary>
+            Gets the string rows.
+            </summary>
+            <param name="message">The message.</param>
+            <returns>The string rows as 1-dimensional array</returns>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.GetButtonText(MaterialSkin.Controls.FlexibleMaterialForm.ButtonID)">
+            <summary>
+            Gets the button text for the CurrentUICulture language.
+            Note: The fallback language is English
+            </summary>
+            <param name="buttonID">The ID of the button.</param>
+            <returns>The button text</returns>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.GetCorrectedWorkingAreaFactor(System.Double)">
+             <summary>
+             Ensure the given working area factor in the range of  0.2 - 1.0 where:
+            
+             0.2 means:  20 percent of the working area height or width.
+             1.0 means:  100 percent of the working area height or width.
+             </summary>
+             <param name="workingAreaFactor">The given working area factor.</param>
+             <returns>The corrected given working area factor.</returns>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.SetDialogStartPosition(MaterialSkin.Controls.FlexibleMaterialForm,System.Windows.Forms.IWin32Window)">
+            <summary>
+            Set the dialogs start position when given.
+            Otherwise center the dialog on the current screen.
+            </summary>
+            <param name="FlexibleMaterialForm">The FlexibleMessageBox dialog.</param>
+            <param name="owner">The owner.</param>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.SetDialogSizes(MaterialSkin.Controls.FlexibleMaterialForm,System.String,System.String)">
+            <summary>
+            Calculate the dialogs start size (Try to auto-size width to show longest text row).
+            Also set the maximum dialog size.
+            </summary>
+            <param name="FlexibleMaterialForm">The FlexibleMessageBox dialog.</param>
+            <param name="text">The text (the longest text row is used to calculate the dialog width).</param>
+            <param name="caption">The caption<see cref="T:System.String"/></param>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.SetDialogIcon(MaterialSkin.Controls.FlexibleMaterialForm,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            Set the dialogs icon.
+            When no icon is used: Correct placement and width of rich text box.
+            </summary>
+            <param name="FlexibleMaterialForm">The FlexibleMessageBox dialog.</param>
+            <param name="icon">The MessageBoxIcon.</param>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.SetDialogButtons(MaterialSkin.Controls.FlexibleMaterialForm,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            Set dialog buttons visibilities and texts.
+            Also set a default button.
+            </summary>
+            <param name="FlexibleMaterialForm">The FlexibleMessageBox dialog.</param>
+            <param name="buttons">The buttons.</param>
+            <param name="defaultButton">The default button.</param>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.FlexibleMaterialForm_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Shown event of the FlexibleMaterialForm control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.richTextBoxMessage_LinkClicked(System.Object,System.Windows.Forms.LinkClickedEventArgs)">
+            <summary>
+            Handles the LinkClicked event of the richTextBoxMessage control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.LinkClickedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.FlexibleMaterialForm_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Handles the KeyUp event of the richTextBoxMessage control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.KeyEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:MaterialSkin.Controls.FlexibleMaterialForm.CaptionText">
+            <summary>
+            Gets or sets the CaptionText
+            The text that is been used for the heading.
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Controls.FlexibleMaterialForm.MessageText">
+            <summary>
+            Gets or sets the MessageText
+            The text that is been used in the FlexibleMaterialForm.
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.Controls.FlexibleMaterialForm.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            Shows the specified message box.
+            </summary>
+            <param name="owner">The owner.</param>
+            <param name="text">The text.</param>
+            <param name="caption">The caption.</param>
+            <param name="buttons">The buttons.</param>
+            <param name="icon">The icon.</param>
+            <param name="defaultButton">The default button.</param>
+            <returns>The dialog result.</returns>
+        </member>
+        <member name="T:MaterialSkin.Controls.MaterialButton">
+            <summary>
+            Defines the <see cref="T:MaterialSkin.Controls.MaterialButton" />
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Controls.MaterialButton.Depth">
+            <summary>
+            Gets or sets the Depth
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Controls.MaterialButton.SkinManager">
+            <summary>
+            Gets the SkinManager
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Controls.MaterialButton.MouseState">
+            <summary>
+            Gets or sets the MouseState
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Controls.MaterialButton.HighEmphasis">
+            <summary>
+            Gets or sets a value indicating whether HighEmphasis
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Controls.MaterialButton.Type">
+            <summary>
+            Gets or sets a value indicating whether HighEmphasis
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.MaterialButton._textSize">
+            <summary>
+            Defines the _textSize
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.Controls.MaterialButton._icon">
+            <summary>
+            Defines the _icon
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Controls.MaterialButton.Icon">
+            <summary>
+            Gets or sets the Icon
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.Controls.MaterialButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MaterialSkin.Controls.MaterialButton"/> class.
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.Controls.MaterialButton.Text">
+            <summary>
+            Gets or sets the Text
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.Controls.MaterialButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            The OnPaint
+            </summary>
+            <param name="pevent">The pevent<see cref="T:System.Windows.Forms.PaintEventArgs"/></param>
+        </member>
+        <member name="M:MaterialSkin.Controls.MaterialButton.GetPreferredSize">
+            <summary>
+            The GetPreferredSize
+            </summary>
+            <returns>The <see cref="T:System.Drawing.Size"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Controls.MaterialButton.GetPreferredSize(System.Drawing.Size)">
+            <summary>
+            The GetPreferredSize
+            </summary>
+            <param name="proposedSize">The proposedSize<see cref="T:System.Drawing.Size"/></param>
+            <returns>The <see cref="T:System.Drawing.Size"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Controls.MaterialButton.OnCreateControl">
+            <summary>
+            The OnCreateControl
+            </summary>
+        </member>
+        <member name="T:MaterialSkin.Controls.MaterialMessageBox">
+            TODO: Break this out into a MaterialDialog then extend into the MaterialMsgBox
+            Adapted from http://www.codeproject.com/Articles/601900/FlexibleMessageBox
+        </member>
+        <member name="T:MaterialSkin.DrawHelper">
+            <summary>
+            Defines the <see cref="T:MaterialSkin.DrawHelper" />
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.DrawHelper.CreateRoundRect(System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            The CreateRoundRect
+            </summary>
+            <param name="x">The x<see cref="T:System.Single"/></param>
+            <param name="y">The y<see cref="T:System.Single"/></param>
+            <param name="width">The width<see cref="T:System.Single"/></param>
+            <param name="height">The height<see cref="T:System.Single"/></param>
+            <param name="radius">The radius<see cref="T:System.Single"/></param>
+            <returns>The <see cref="T:System.Drawing.Drawing2D.GraphicsPath"/></returns>
+        </member>
+        <member name="M:MaterialSkin.DrawHelper.CreateRoundRect(System.Drawing.Rectangle,System.Single)">
+            <summary>
+            The CreateRoundRect
+            </summary>
+            <param name="rect">The rect<see cref="T:System.Drawing.Rectangle"/></param>
+            <param name="radius">The radius<see cref="T:System.Single"/></param>
+            <returns>The <see cref="T:System.Drawing.Drawing2D.GraphicsPath"/></returns>
+        </member>
+        <member name="M:MaterialSkin.DrawHelper.CreateRoundRect(System.Drawing.RectangleF,System.Single)">
+            <summary>
+            The CreateRoundRect
+            </summary>
+            <param name="rect">The rect<see cref="T:System.Drawing.RectangleF"/></param>
+            <param name="radius">The radius<see cref="T:System.Single"/></param>
+            <returns>The <see cref="T:System.Drawing.Drawing2D.GraphicsPath"/></returns>
+        </member>
+        <member name="M:MaterialSkin.DrawHelper.BlendColor(System.Drawing.Color,System.Drawing.Color,System.Double)">
+            <summary>
+            The BlendColor
+            </summary>
+            <param name="backgroundColor">The backgroundColor<see cref="T:System.Drawing.Color"/></param>
+            <param name="frontColor">The frontColor<see cref="T:System.Drawing.Color"/></param>
+            <param name="blend">The blend<see cref="T:System.Double"/></param>
+            <returns>The <see cref="T:System.Drawing.Color"/></returns>
+        </member>
+        <member name="M:MaterialSkin.DrawHelper.BlendColor(System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            The BlendColor
+            </summary>
+            <param name="backgroundColor">The backgroundColor<see cref="T:System.Drawing.Color"/></param>
+            <param name="frontColor">The frontColor<see cref="T:System.Drawing.Color"/></param>
+            <returns>The <see cref="T:System.Drawing.Color"/></returns>
+        </member>
+        <member name="T:MaterialSkin.Extensions">
+            <summary>
+            Defines the <see cref="T:MaterialSkin.Extensions" />
+            These add functions on default C# types and classes
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.Extensions.HasProperty(System.Object,System.String)">
+            <summary>
+            The HasProperty
+            </summary>
+            <param name="objectToCheck">The objectToCheck<see cref="T:System.Object"/></param>
+            <param name="propertyName">The propertyName<see cref="T:System.String"/></param>
+            <returns>The <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Extensions.IsMaterialControl(System.Object)">
+            <summary>
+            The IsMaterialControl
+            </summary>
+            <param name="obj">The obj<see cref="T:System.Object"/></param>
+            <returns>The <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="M:MaterialSkin.Extensions.ToSecureString(System.String)">
+            <summary>
+            Transforms every char on a string to this dot: ●
+            </summary>
+            <param name="plainString"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialSkin.IMaterialControl">
+            <summary>
+            Defines the <see cref="T:MaterialSkin.IMaterialControl" />
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.IMaterialControl.Depth">
+            <summary>
+            Gets or sets the Depth
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.IMaterialControl.SkinManager">
+            <summary>
+            Gets the SkinManager
+            </summary>
+        </member>
+        <member name="P:MaterialSkin.IMaterialControl.MouseState">
+            <summary>
+            Gets or sets the MouseState
+            </summary>
+        </member>
+        <member name="T:MaterialSkin.MouseState">
+            <summary>
+            Defines the MouseState
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.MouseState.HOVER">
+            <summary>
+            Defines the HOVER
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.MouseState.DOWN">
+            <summary>
+            Defines the DOWN
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.MouseState.OUT">
+            <summary>
+            Defines the OUT
+            </summary>
+        </member>
+        <member name="F:MaterialSkin.MaterialSkinManager.EnforceBackcolorOnAllComponents">
+            <summary>
+            Set this property to false to stop enforcing the backcolor on non-materialSkin components
+            </summary>
+        </member>
+        <member name="M:MaterialSkin.MaterialSkinManager.getTextBoxFontBySize(System.Int32)">
+            <summary>
+            Get the font by size - used for textbox label animation, try to not use this for anything else
+            </summary>
+            <param name="size">font size, ranges from 12 up to 16</param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialSkin.MaterialSkinManager.getLogFontByType(MaterialSkin.MaterialSkinManager.fontType)">
+            <summary>
+            Gets a Material Skin Logical Roboto Font given a standard material font type
+            </summary>
+            <param name="type">material design font type</param>
+            <returns></returns>
+        </member>
+        <member name="M:H.Resources.ReadFileAsStream(System.String,System.Reflection.Assembly)">
+            <summary>
+            Searches for a file among Embedded resources <br/>
+            Throws an <see cref="T:System.ArgumentException"/> if nothing is found or more than one match is found <br/>
+            <![CDATA[Version: 1.0.0.4]]> <br/>
+            </summary>
+            <param name="name"></param>
+            <param name="assembly"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+            <returns></returns>
+        </member>
+        <member name="M:H.Resources.ReadFileAsBytes(System.String,System.Reflection.Assembly)">
+            <summary>
+            Searches for a file among Embedded resources <br/>
+            Throws an <see cref="T:System.ArgumentException"/> if nothing is found or more than one match is found <br/>
+            <![CDATA[Version: 1.0.0.2]]> <br/>
+            <![CDATA[Dependency: ReadFileAsStream(string name, Assembly? assembly = null)]]> <br/>
+            </summary>
+            <param name="name"></param>
+            <param name="assembly"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

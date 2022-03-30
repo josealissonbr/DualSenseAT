@@ -63,6 +63,26 @@ namespace DualSenseAT.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fg {
+            get {
+                object obj = ResourceManager.GetObject("fg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_16px {
+            get {
+                object obj = ResourceManager.GetObject("home_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_divisa_circulada_à_direita_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-divisa-circulada-à-direita-64", resourceCulture);
@@ -76,6 +96,56 @@ namespace DualSenseAT.Properties {
         internal static System.Drawing.Bitmap icons8_idioma_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-idioma-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap info_26px {
+            get {
+                object obj = ResourceManager.GetObject("info_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap language_24px {
+            get {
+                object obj = ResourceManager.GetObject("language_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ok_26px {
+            get {
+                object obj = ResourceManager.GetObject("ok_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap playstation_26px {
+            get {
+                object obj = ResourceManager.GetObject("playstation_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_26px {
+            get {
+                object obj = ResourceManager.GetObject("settings_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

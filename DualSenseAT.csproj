@@ -46,6 +46,33 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AdvancedPageDragAndDrop">
+      <HintPath>..\Krypton Libs\AdvancedPageDragAndDrop.exe</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Design">
+      <HintPath>..\Krypton Libs\ComponentFactory.Krypton.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>..\Krypton Libs\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>..\Krypton Libs\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\Krypton Libs\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\Krypton Libs\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>..\Krypton Libs\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomControlUsingPalettes">
+      <HintPath>..\Krypton Libs\CustomControlUsingPalettes.exe</HintPath>
+    </Reference>
+    <Reference Include="H.MaterialSkin, Version=2.1.10.0, Culture=neutral, PublicKeyToken=b9e9fbe9b6908adc, processorArchitecture=MSIL">
+      <HintPath>packages\H.MaterialSkin.2.1.10\lib\net45\H.MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -62,6 +89,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -77,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="ExtraControls\ATButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +116,7 @@
     </Compile>
     <Compile Include="Functions\apiFunctions.cs" />
     <Compile Include="Functions\Console.cs" />
+    <Compile Include="Functions\langs.cs" />
     <Compile Include="gameloadDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +124,12 @@
       <DependentUpon>gameloadDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="IniFile.cs" />
+    <Compile Include="Main2Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main2Window.Designer.cs">
+      <DependentUpon>Main2Window.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,11 +138,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetupWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupWindow.Designer.cs">
+      <DependentUpon>SetupWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="SplashWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SplashWindow.Designer.cs">
       <DependentUpon>SplashWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
     <Compile Include="UpdateWindow.cs">
       <SubType>Form</SubType>
@@ -112,11 +159,15 @@
     <Compile Include="UpdateWindow.Designer.cs">
       <DependentUpon>UpdateWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserPreferences.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gameloadDialog.resx">
       <DependentUpon>gameloadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main2Window.resx">
+      <DependentUpon>Main2Window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -131,6 +182,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SetupWindow.resx">
+      <DependentUpon>SetupWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashWindow.resx">
       <DependentUpon>SplashWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,9 +206,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="uc\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icons8-idioma-96.png" />
   </ItemGroup>
@@ -163,6 +215,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dualsense-logo-3AB110CC79-seeklogo.com.ico" />
+    <None Include="Resources\language_24px.png" />
+    <None Include="Resources\ok_26px.png" />
+    <None Include="Resources\fg.png" />
+    <None Include="Resources\info_26px.png" />
+    <None Include="Resources\settings_26px.png" />
+    <None Include="Resources\playstation_26px.png" />
+    <None Include="Resources\home_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="uc\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

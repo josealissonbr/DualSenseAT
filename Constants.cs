@@ -10,10 +10,11 @@ namespace DualSenseAT
     internal class Constants
     {
 
+        public static string AppName = "DualSenseAT";
         public static string BASE_URL = "https://raw.githubusercontent.com/josealissonbr/DSAT-api-repo/main/";
         public static string TEMP_PATH = Application.StartupPath + "\\temp\\";
 
-        public static string LANG_PATH = Application.StartupPath + "\\langs\\";
+        public static string LANG_PATH = "C:\\Temp\\DualSenseAT\\langs\\";
 
     }
 }
