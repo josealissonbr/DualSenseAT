@@ -44,9 +44,6 @@ namespace DualSenseAT
             UserPreferences.LANG_CODE = "en_US";
 #endif
 
-            
-
-
             if (!Directory.Exists(Constants.BASE_TEMP_PATH))
             {
                 Directory.CreateDirectory(Constants.BASE_TEMP_PATH);
