@@ -15,6 +15,9 @@ namespace DualSenseAT
 
         public static void RunSetup()
         {
+            if (!Directory.Exists(Constants.TEMP_PATH))
+                Directory.CreateDirectory(Constants.TEMP_PATH);
+
             using (WebClient wclient = new WebClient())
             {
                 wclient.DownloadFile(Constants.BASE_URL + "\\Localizations.zip", Constants.TEMP_PATH + "\\Localizations.zip");
