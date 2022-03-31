@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -77,11 +78,25 @@ namespace DualSenseAT
 
         private void checkUpdates_DoWork(object sender, DoWorkEventArgs e)
         {
+            JObject updateJson = Functions.apiFunctions.getUpdates();
 
+
+            if (updateJson["update"][0]["code"].ToString() != Application.ProductVersion)
+            {
+                e.Result = updateJson;
+            }
+            
         }
 
         private void checkUpdates_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            if (e.Result.GetType() == typeof(JObject))
+            {
+                UpdateWindow updateW = new UpdateWindow();
+                updateW.updateJson = (JObject)e.Result;
+
+                updateW.ShowDialog();
+            }
 
             DownloadHome();
 
