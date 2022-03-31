@@ -72,6 +72,8 @@ namespace DualSenseAT
         private void SplashWindow_Load(object sender, EventArgs e)
         {
             UpdateLbl.Text = "Checking Updates...";
+
+            this.Text = "DualSense AT v" + Application.ProductVersion;
             checkUpdates.RunWorkerAsync();
 
         }
@@ -84,6 +86,10 @@ namespace DualSenseAT
             if (updateJson["update"][0]["code"].ToString() != Application.ProductVersion)
             {
                 e.Result = updateJson;
+            }
+            else
+            {
+                e.Result = false;
             }
             
         }

@@ -60,3 +60,10 @@ obj/Release/DualSenseAT_Content.g.i.cs
 obj/Release/DualSenseAT.csproj.FileListAbsolute.txt
 obj/Release/.NETFramework,Version=v4.8.AssemblyAttributes.cs
 obj/Debug/DualSenseAT_MarkupCompile.i.lref
+obj/Release/DualSenseAT.csproj.CopyComplete
+obj/Release/DualSenseAT.exe
+obj/Release/DualSenseAT.pdb
+obj/Release/DualSenseAT_Content.g.cs
+obj/Release/DualSenseAT_MarkupCompile.lref
+obj/Release/uc/UserControl1.baml
+obj/Release/uc/UserControl1.g.cs

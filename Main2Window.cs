@@ -130,6 +130,9 @@ namespace DualSenseAT
         {
             LoadLang();
 
+            //Set window title
+            this.Text = "DualSense AT v" + Application.ProductVersion;
+
 
             materialTabControl1.Update();
 
