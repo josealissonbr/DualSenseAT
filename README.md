@@ -25,7 +25,7 @@
 </div>
 </p>
 
-<img src="https://github.com/josealissonbr/DualSenseAT/blob/main/screenshots/Screenshot_1.png?raw=true" align="center" />
+<img src="https://github.com/josealissonbr/DualSenseAT/blob/main/screenshots/v0.1.0.2.png?raw=true" align="center" />
 
 # About the App
 ### This App only works with `Playstation 5 DualSense`
