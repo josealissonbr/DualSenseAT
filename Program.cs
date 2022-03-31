@@ -39,9 +39,11 @@ namespace DualSenseAT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            var Settings = new IniFile(Constants.TEMP_PATH + "\\DualSenseAT_settings.ini");
+            UserPreferences.LANG_CODE = Settings.Read("Lang");
 #if (DEBUG)
             //Set Default Lang for Debug
-            UserPreferences.LANG_CODE = "en_US";
+            //UserPreferences.LANG_CODE = "en_US";
 #endif
 
             if (!Directory.Exists(Constants.BASE_TEMP_PATH))
@@ -53,11 +55,11 @@ namespace DualSenseAT
             else
             {
 
-                var Settings = new IniFile(Constants.TEMP_PATH + "\\DualSenseAT_settings.ini");
+                
 
                 if (Settings.Read("is_installed") == "true")
                 {
-                    Application.Run(new Main2Window());
+                    Application.Run(new SplashWindow());
                 }
                 else
                 {

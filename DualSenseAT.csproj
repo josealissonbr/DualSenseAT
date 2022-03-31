@@ -117,6 +117,8 @@
     <Compile Include="Functions\apiFunctions.cs" />
     <Compile Include="Functions\Console.cs" />
     <Compile Include="Functions\langs.cs" />
+    <Compile Include="Functions\NetworkServices.cs" />
+    <Compile Include="Functions\UIFunctions.cs" />
     <Compile Include="gameloadDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +145,12 @@
     </Compile>
     <Compile Include="SetupWindow.Designer.cs">
       <DependentUpon>SetupWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashWindow.Designer.cs">
+      <DependentUpon>SplashWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="uc\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
@@ -179,6 +187,9 @@
     <EmbeddedResource Include="SetupWindow.resx">
       <DependentUpon>SetupWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SplashWindow.resx">
+      <DependentUpon>SplashWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateWindow.resx">
       <DependentUpon>UpdateWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +217,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dualsense-logo-3AB110CC79-seeklogo.com.ico" />
+    <None Include="Resources\image_not_found.png" />
     <None Include="Resources\language_24px.png" />
     <None Include="Resources\ok_26px.png" />
     <None Include="Resources\fg.png" />

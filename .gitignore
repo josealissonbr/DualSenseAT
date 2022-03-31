@@ -54,3 +54,9 @@ obj/Debug/DualSenseAT_MarkupCompile.lref
 obj/Debug/DualSenseAT_Content.g.i.cs
 obj/Debug/DualSenseAT_Content.g.cs
 bin/Debug/temp/Localizations.zip
+obj/Release/uc/UserControl1.g.i.cs
+obj/Release/TempPE/Properties.Resources.Designer.cs.dll
+obj/Release/DualSenseAT_Content.g.i.cs
+obj/Release/DualSenseAT.csproj.FileListAbsolute.txt
+obj/Release/.NETFramework,Version=v4.8.AssemblyAttributes.cs
+obj/Debug/DualSenseAT_MarkupCompile.i.lref

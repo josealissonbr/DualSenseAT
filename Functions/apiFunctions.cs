@@ -10,13 +10,17 @@ namespace DualSenseAT.Functions
 {
     internal class apiFunctions
     {
+        private static JObject gamesJson = null;
         public static JObject getGames()
         {
-            WebClient client = new WebClient();
-            var json = client.DownloadString("https://raw.githubusercontent.com/josealissonbr/DSAT-api-repo/main/games/gameList.json");
-            JObject o = JObject.Parse(json);
+            if (gamesJson == null)
+            {
+                WebClient client = new WebClient();
+                var json = client.DownloadString("https://raw.githubusercontent.com/josealissonbr/DSAT-api-repo/main/games/gameList.json");
+                gamesJson = JObject.Parse(json);
+            }
 
-            return o;
+            return gamesJson;
         }
 
         public static JObject getUpdates()

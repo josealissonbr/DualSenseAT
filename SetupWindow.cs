@@ -23,9 +23,9 @@ namespace DualSenseAT
 
         private void LoadLangsList()
         {
-            DirectoryInfo d = new DirectoryInfo(Constants.LANG_PATH); //Assuming Test is your Folder
+            DirectoryInfo d = new DirectoryInfo(Constants.LANG_PATH);
 
-            langList = d.GetFiles("*.json"); //Getting Text files
+            langList = d.GetFiles("*.json"); //Getting Json files
 
             foreach (FileInfo file in langList)
             {
@@ -35,7 +35,25 @@ namespace DualSenseAT
 
         private void SetupWindow_Load(object sender, EventArgs e)
         {
-            
+            LoadLangsList();
+        }
+
+        private void atButton1_Click(object sender, EventArgs e)
+        {
+            if (langCBox.SelectedIndex == -1)
+            {
+                if (MessageBox.Show(this, "You have not selected any language, if you continue the default language will be set to English (en_US)", Constants.AppName, MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
+
+            Functions.UIFunctions.setDefaultLang(langCBox.Text);
+
+            MessageBox.Show("DualSenseAT will restart", "Setup Success!");
+
+            Application.Restart();
+
         }
     }
 }

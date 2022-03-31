@@ -18,5 +18,7 @@ namespace DualSenseAT
 
         public static string BASE_TEMP_PATH = "C:\\Temp\\DualSenseAT\\";
 
+        public static int HomeFeaturedSlider_Intervalms = 10000; //In Ms
+
     }
 }

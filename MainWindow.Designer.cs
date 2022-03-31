@@ -39,6 +39,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.settingsTab = new MetroFramework.Controls.MetroTabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.versionLbl = new MetroFramework.Controls.MetroLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -48,7 +49,6 @@
             this.consoleInputBox = new MetroFramework.Controls.MetroTextBox();
             this.consoleOutput = new MetroFramework.Controls.MetroTextBox();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.metroTabControl1.SuspendLayout();
             this.gamesTab.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,7 +68,7 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(784, 561);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -81,9 +81,9 @@
             this.gamesTab.HorizontalScrollbarBarColor = true;
             this.gamesTab.HorizontalScrollbarHighlightOnWheel = false;
             this.gamesTab.HorizontalScrollbarSize = 10;
-            this.gamesTab.Location = new System.Drawing.Point(4, 35);
+            this.gamesTab.Location = new System.Drawing.Point(4, 38);
             this.gamesTab.Name = "gamesTab";
-            this.gamesTab.Size = new System.Drawing.Size(776, 522);
+            this.gamesTab.Size = new System.Drawing.Size(776, 519);
             this.gamesTab.TabIndex = 0;
             this.gamesTab.Text = "Games";
             this.gamesTab.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -103,7 +103,7 @@
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel1.Location = new System.Drawing.Point(228, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(540, 507);
+            this.panel1.Size = new System.Drawing.Size(540, 504);
             this.panel1.TabIndex = 3;
             // 
             // metroButton1
@@ -188,6 +188,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Updates";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
             // 
             // metroButton2
             // 
@@ -339,16 +349,6 @@
             // metroStyleManager1
             // 
             this.metroStyleManager1.Owner = null;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            this.label1.Visible = false;
             // 
             // MainWindow
             // 
