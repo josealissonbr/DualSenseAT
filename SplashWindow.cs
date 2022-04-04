@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -22,6 +23,12 @@ namespace DualSenseAT
 
         static int steps = 0;
 
+        private void LoadLangsList()
+        {
+            DirectoryInfo d = new DirectoryInfo(Constants.LANG_PATH);
+
+            Session.langList = d.GetFiles("*.json"); //Getting Json files
+        }
         public void DownloadHome()
         {
             UpdateLbl.Text = "Fetching Home data...";
@@ -91,7 +98,11 @@ namespace DualSenseAT
             {
                 e.Result = false;
             }
-            
+
+            //Load Land List to Session Namespace;
+            LoadLangsList();
+
+
         }
 
         private void checkUpdates_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

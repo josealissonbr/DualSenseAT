@@ -133,6 +133,16 @@ namespace DualSenseAT.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap more_than_32px {
+            get {
+                object obj = ResourceManager.GetObject("more_than_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ok_26px {
             get {
                 object obj = ResourceManager.GetObject("ok_26px", resourceCulture);

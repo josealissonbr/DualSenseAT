@@ -40,15 +40,20 @@ namespace DualSenseAT
 
         private void atButton1_Click(object sender, EventArgs e)
         {
+            Functions.UIFunctions.setDefaultLang(langCBox.Text);
             if (langCBox.SelectedIndex == -1)
             {
                 if (MessageBox.Show(this, "You have not selected any language, if you continue the default language will be set to English (en_US)", Constants.AppName, MessageBoxButtons.OKCancel) == DialogResult.Cancel)
                 {
                     return;
                 }
+                else
+                {
+                    Functions.UIFunctions.setDefaultLang("en_US");
+                }
             }
 
-            Functions.UIFunctions.setDefaultLang(langCBox.Text);
+            
 
             MessageBox.Show("DualSenseAT will restart", "Setup Success!");
 

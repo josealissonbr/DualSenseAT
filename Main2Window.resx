@@ -138,6 +138,12 @@
   <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="everyTicker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -147,7 +153,55 @@
   <metadata name="sliderTrade.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>237, 17</value>
   </metadata>
+  <metadata name="pictureBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="featuredPicBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pictureBox3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="atButton2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="atButton1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="atButton6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAUtJREFUWEft
+        lT8vBEEchvcO8ScKIiEaCVEJiagUV+vuK2jpfACNXuUrKLVapUIUNCpBtCSSCwlCYj3veX/JNbqdqeZJ
+        nmJ33sy7tzczWxUKhf+o6/oMt3yZH8qDO9zDcQ/lgcJdvMfgEfUgk46kh7I2dvECgzc8wgXH8kBhB08x
+        +MJjXHUkDxRu4An+YHCOXUfyQOEa6g18Y3CF2zjsWHooW0StiQ8MHlALdsKx9FA2hwfYw+AZdW/GsfRQ
+        No+H+IpBz8PpoWwK9/FJzSb9A1CyjFqUn2o0t6hFOepY8zD5CqpY50JwiTrA2o41D5Nvog6mwfNA1x1H
+        mofJW6hfpoMn0DmgN7DuWPMw+RDqv7zG4B21/5ccax4mH0MdKPokBy+ovT3rWBoo2MHBYm0rba9pR9LS
+        r/zjBvX6RzyUBwr7Xzhs+VahUEhAVf0CPxjl1m3Z4nAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="atButton5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAUtJREFUWEft
+        lT8vBEEchvcO8ScKIiEaCVEJiagUV+vuK2jpfACNXuUrKLVapUIUNCpBtCSSCwlCYj3veX/JNbqdqeZJ
+        nmJ33sy7tzczWxUKhf+o6/oMt3yZH8qDO9zDcQ/lgcJdvMfgEfUgk46kh7I2dvECgzc8wgXH8kBhB08x
+        +MJjXHUkDxRu4An+YHCOXUfyQOEa6g18Y3CF2zjsWHooW0StiQ8MHlALdsKx9FA2hwfYw+AZdW/GsfRQ
+        No+H+IpBz8PpoWwK9/FJzSb9A1CyjFqUn2o0t6hFOepY8zD5CqpY50JwiTrA2o41D5Nvog6mwfNA1x1H
+        mofJW6hfpoMn0DmgN7DuWPMw+RDqv7zG4B21/5ccax4mH0MdKPokBy+ovT3rWBoo2MHBYm0rba9pR9LS
+        r/zjBvX6RzyUBwr7Xzhs+VahUEhAVf0CPxjl1m3Z4nAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="atButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAUtJREFUWEft
+        lT8vBEEchvcO8ScKIiEaCVEJiagUV+vuK2jpfACNXuUrKLVapUIUNCpBtCSSCwlCYj3veX/JNbqdqeZJ
+        nmJ33sy7tzczWxUKhf+o6/oMt3yZH8qDO9zDcQ/lgcJdvMfgEfUgk46kh7I2dvECgzc8wgXH8kBhB08x
+        +MJjXHUkDxRu4An+YHCOXUfyQOEa6g18Y3CF2zjsWHooW0StiQ8MHlALdsKx9FA2hwfYw+AZdW/GsfRQ
+        No+H+IpBz8PpoWwK9/FJzSb9A1CyjFqUn2o0t6hFOepY8zD5CqpY50JwiTrA2o41D5Nvog6mwfNA1x1H
+        mofJW6hfpoMn0DmgN7DuWPMw+RDqv7zG4B21/5ccax4mH0MdKPokBy+ovT3rWBoo2MHBYm0rba9pR9LS
+        r/zjBvX6RzyUBwr7Xzhs+VahUEhAVf0CPxjl1m3Z4nAAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAMsAAAEAIACIRQMAFgAAACgAAAAAAQAAlgEAAAEAIAAAAAAAACwDAMMOAADDDgAAAAAAAAAA

@@ -130,6 +130,9 @@
   <data name="ok_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ok_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="image_not_found" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_not_found.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="playstation_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\playstation_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,7 +148,7 @@
   <data name="fg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image_not_found" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_not_found.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="more_than_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\more_than_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

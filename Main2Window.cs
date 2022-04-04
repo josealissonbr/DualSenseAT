@@ -47,7 +47,16 @@ namespace DualSenseAT
             GamesTabButton.Text = Functions.UIFunctions.getLangString("GamesTabButton");
             SettingsTabButton.Text = Functions.UIFunctions.getLangString("SettingsTabButton");
             InfoTabButton.Text = Functions.UIFunctions.getLangString("InfoTabButton");
-            
+
+
+            //Apply LangList to ComboBox
+
+            foreach (FileInfo file in Session.langList)
+            {
+                langCBox.Items.Add(file.Name.Replace(".json", ""));
+            }
+
+            langCBox.SelectedItem = UserPreferences.LANG_CODE;
 
         }
 
