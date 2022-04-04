@@ -47,7 +47,7 @@ To use Adaptive Triggers you need
     
 * Now download and install DualSenseAT
      * Download The latest version from Assets
-Após seguir estes passos, voce estará com o DualSenseX, agora voce precisa baixar o DualSenseAT
+After following these steps, you will have DualSenseX, now you need to download DualSenseAT
 
  
 ## **Supported Games:**
