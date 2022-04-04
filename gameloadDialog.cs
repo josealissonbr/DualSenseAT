@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using ComponentFactory.Krypton.Toolkit;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ using System.Windows.Forms;
 
 namespace DualSenseAT
 {
-    public partial class gameloadDialog : Form
+    public partial class gameloadDialog : KryptonForm
     {
         public gameloadDialog()
         {

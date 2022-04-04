@@ -33,8 +33,8 @@ namespace DualSenseAT
         private Point CenterOfMenuPanel<T>(T control, int height = 0) where T : Control
         {
             Point center = new Point(
-                kryptonPanel1.Size.Width / 2 - control.Width * 2,
-                height != 0 ? height : kryptonPanel1.Size.Height / 2 - control.Height / 2);
+                kryptonPanel1.Size.Width / 2 - kryptonPanel1.Width * 2,
+                height);
 
             return center;
         }
@@ -121,7 +121,7 @@ namespace DualSenseAT
             Stream stream_data = new MemoryStream(client.DownloadData(repojson["games"][index]["picture_url"].ToString()));
             pictureBox1.Image = Image.FromStream(stream_data);
 
-            label3.Location = CenterOfMenuPanel(label3);
+            //label3.Location = CenterOfMenuPanel(label3, 10);
 
             kryptonPanel1.Visible = true;
         }

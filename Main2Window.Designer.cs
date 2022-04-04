@@ -58,6 +58,7 @@
             this.SettingsTabButton = new DualSenseAT.ExtraControls.ATButton();
             this.GamesTabButton = new DualSenseAT.ExtraControls.ATButton();
             this.HomeTabButton = new DualSenseAT.ExtraControls.ATButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabsPanel.SuspendLayout();
             this.materialTabControl1.SuspendLayout();
             this.HomePage.SuspendLayout();
@@ -183,9 +184,10 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.label3);
+            this.kryptonPanel1.Controls.Add(this.panel1);
             this.kryptonPanel1.Controls.Add(this.atButton3);
             this.kryptonPanel1.Controls.Add(this.pictureBox1);
-            this.kryptonPanel1.Controls.Add(this.label3);
             this.kryptonPanel1.Location = new System.Drawing.Point(316, 24);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(637, 437);
@@ -208,10 +210,13 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Hind", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(238, 15);
+            this.label3.Location = new System.Drawing.Point(0, 10);
+            this.label3.MaximumSize = new System.Drawing.Size(637, 33);
+            this.label3.MinimumSize = new System.Drawing.Size(637, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 33);
+            this.label3.Size = new System.Drawing.Size(637, 33);
             this.label3.TabIndex = 2;
             this.label3.Text = "Featured Games";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -219,15 +224,42 @@
             // kryptonListBox1
             // 
             this.kryptonListBox1.Items.AddRange(new object[] {
-            "Teste1"});
+            "Teste1",
+            "Teste2"});
             this.kryptonListBox1.Location = new System.Drawing.Point(28, 24);
             this.kryptonListBox1.Name = "kryptonListBox1";
             this.kryptonListBox1.Size = new System.Drawing.Size(272, 437);
+            this.kryptonListBox1.StateCheckedNormal.Item.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(31)))), ((int)(((byte)(115)))));
+            this.kryptonListBox1.StateCheckedNormal.Item.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(31)))), ((int)(((byte)(115)))));
+            this.kryptonListBox1.StateCheckedNormal.Item.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonListBox1.StateCheckedPressed.Item.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(132)))));
+            this.kryptonListBox1.StateCheckedPressed.Item.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(132)))));
+            this.kryptonListBox1.StateCheckedPressed.Item.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonListBox1.StateCheckedTracking.Item.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(132)))));
+            this.kryptonListBox1.StateCheckedTracking.Item.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(132)))));
+            this.kryptonListBox1.StateCheckedTracking.Item.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.kryptonListBox1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.kryptonListBox1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.kryptonListBox1.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.kryptonListBox1.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonListBox1.StateCommon.Item.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonListBox1.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(132)))));
+            this.kryptonListBox1.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(132)))));
+            this.kryptonListBox1.StateDisabled.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonListBox1.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(132)))));
+            this.kryptonListBox1.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(132)))));
+            this.kryptonListBox1.StateNormal.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonListBox1.StatePressed.Item.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(64)))), ((int)(((byte)(132)))));
+            this.kryptonListBox1.StatePressed.Item.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(132)))));
+            this.kryptonListBox1.StatePressed.Item.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonListBox1.StateTracking.Item.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(132)))));
+            this.kryptonListBox1.StateTracking.Item.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(64)))), ((int)(((byte)(132)))));
+            this.kryptonListBox1.StateTracking.Item.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonListBox1.StateTracking.Item.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(31)))), ((int)(((byte)(115)))));
+            this.kryptonListBox1.StateTracking.Item.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(31)))), ((int)(((byte)(115)))));
+            this.kryptonListBox1.StateTracking.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonListBox1.TabIndex = 0;
             this.kryptonListBox1.SelectedIndexChanged += new System.EventHandler(this.kryptonListBox1_SelectedIndexChanged);
             // 
@@ -457,6 +489,15 @@
             this.HomeTabButton.UseVisualStyleBackColor = false;
             this.HomeTabButton.Click += new System.EventHandler(this.HomeTabButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(637, 10);
+            this.panel1.TabIndex = 5;
+            // 
             // Main2Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -547,5 +588,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ExtraControls.ATButton atButton3;
+        private System.Windows.Forms.Panel panel1;
     }
 }
