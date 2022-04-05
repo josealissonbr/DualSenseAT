@@ -280,5 +280,15 @@ namespace DualSenseAT
         {
             LoadGameMod(kryptonListBox1.SelectedIndex);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void langCBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Functions.UIFunctions.setDefaultLang(langCBox.SelectedItem.ToString());
+        }
     }
 }
