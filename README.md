@@ -57,7 +57,7 @@ After following these steps, you will have DualSenseX, now you need to download 
 - Grand Theft Auto V
 - Rocket League
 - Death Stranding
-- Resident Evil 5
+- Resident Evil 5 (Steam)
 - Resident Evil 4
 - Skyrim Special Edition (Steam)
 
