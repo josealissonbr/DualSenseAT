@@ -61,4 +61,8 @@ After following these steps, you will have DualSenseX, now you need to download 
 - Resident Evil 4
 - Skyrim Special Edition (Steam)
 
+## **Requirements to add games to project**
+- Project need to be OpenSource.
+
+
 `This Application uses ReadProcessMemory (RPM) in some games to read Game data, there have never been any cases of bans in the game so if something like that happens, let us know`
