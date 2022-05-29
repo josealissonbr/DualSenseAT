@@ -30,7 +30,7 @@ namespace DualSenseAT.Functions
 
         public static bool isDSXRunning()
         {
-            Process[] pname = Process.GetProcessesByName("DualSenseX");
+            Process[] pname = Process.GetProcessesByName("DSX");
             if (pname.Length == 0)
                 return false;
             else

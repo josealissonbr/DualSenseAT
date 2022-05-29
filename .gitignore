@@ -67,3 +67,7 @@ obj/Release/DualSenseAT_Content.g.cs
 obj/Release/DualSenseAT_MarkupCompile.lref
 obj/Release/uc/UserControl1.baml
 obj/Release/uc/UserControl1.g.cs
+*.vsidx
+*.vsidx
+.vs/DualSenseAT/FileContentIndex/b8c7ad57-93fb-4d5f-bb3d-d71a8fcd76f1.vsidx
+bin/Debug/temp/DualSenseAT_settings.ini
