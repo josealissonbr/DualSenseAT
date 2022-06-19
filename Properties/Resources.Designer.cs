@@ -63,6 +63,16 @@ namespace DualSenseAT.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full {
+            get {
+                object obj = ResourceManager.GetObject("fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fg {
             get {
                 object obj = ResourceManager.GetObject("fg", resourceCulture);
@@ -156,6 +166,26 @@ namespace DualSenseAT.Properties {
         internal static System.Drawing.Bitmap playstation_26px {
             get {
                 object obj = ResourceManager.GetObject("playstation_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_144px {
+            get {
+                object obj = ResourceManager.GetObject("search_144px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_144px {
+            get {
+                object obj = ResourceManager.GetObject("settings_144px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

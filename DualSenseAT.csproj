@@ -121,6 +121,12 @@
     <Reference Include="ExternalDragToDocking">
       <HintPath>Krypton Dependencies\ExternalDragToDocking.exe</HintPath>
     </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>dependencies\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>dependencies\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="H.MaterialSkin, Version=2.1.10.0, Culture=neutral, PublicKeyToken=b9e9fbe9b6908adc, processorArchitecture=MSIL">
       <HintPath>packages\H.MaterialSkin.2.1.10\lib\net45\H.MaterialSkin.dll</HintPath>
     </Reference>
@@ -411,6 +417,12 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainWindowV3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindowV3.Designer.cs">
+      <DependentUpon>MainWindowV3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session.cs" />
@@ -447,6 +459,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindowV3.resx">
+      <DependentUpon>MainWindowV3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -491,6 +506,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dualsense-logo-3AB110CC79-seeklogo.com.ico" />
+    <None Include="ext_assets\search_144px.png" />
+    <None Include="Resources\fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg" />
+    <None Include="ext_assets\settings_144px.png" />
     <None Include="Resources\more_than_32px.png" />
     <None Include="Resources\image_not_found.png" />
     <None Include="Resources\language_24px.png" />

@@ -42,6 +42,20 @@ namespace DualSenseAT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //debug purposes
+            Session.SteamData.vanityUrl = "SayoriBR";
+            Session.SteamData.webApiKey = "1E393413595E51AAC284177A39FEE6E6";
+
+            //Resolve steamID64
+            Functions.apiFunctions.loadSteamData();
+
+            MessageBox.Show(Session.SteamData.UserData.SteamID64);
+
+             Application.Run(new MainWindowV3());
+            //return for tests
+            return;
+
             var Settings = new IniFile(Constants.TEMP_PATH + "\\DualSenseAT_settings.ini");
             UserPreferences.LANG_CODE = Settings.Read("Lang");
 #if (DEBUG)
