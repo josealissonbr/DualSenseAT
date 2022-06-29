@@ -26,7 +26,6 @@ namespace DualSenseAT
         private void LoadLangsList()
         {
             DirectoryInfo d = new DirectoryInfo(Constants.LANG_PATH);
-
             Session.langList = d.GetFiles("*.json"); //Getting Json files
         }
         public void DownloadHome()
@@ -34,7 +33,6 @@ namespace DualSenseAT
             UpdateLbl.Text = "Fetching Home data...";
             using (WebClient cliente = new WebClient())
             {
-
                 var pathfinal = Constants.BASE_TEMP_PATH + "home.json";
                 var uri = new Uri(Constants.BASE_URL + "home/home.json");
 
@@ -43,7 +41,6 @@ namespace DualSenseAT
                 cliente.DownloadFileAsync(uri, pathfinal);
             }
 
-            
         }
 
 
@@ -63,9 +60,7 @@ namespace DualSenseAT
                 this.Hide();
                 this.ShowInTaskbar = false;
                 Main2Window mainWindow = new Main2Window();
-
                 mainWindow.Location = this.Location;
-                
                 mainWindow.Show();
             }
             

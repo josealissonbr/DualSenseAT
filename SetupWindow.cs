@@ -17,6 +17,8 @@ namespace DualSenseAT
         public SetupWindow()
         {
             InitializeComponent();
+
+            this.Text = "DualSense AT v" + Application.ProductVersion + " Setup";
         }
 
         FileInfo[] langList = { };
@@ -53,9 +55,9 @@ namespace DualSenseAT
                 }
             }
 
-            
 
-            MessageBox.Show("DualSenseAT will restart", "Setup Success!");
+
+            MessageBox.Show("DualSenseAT will restart", "Setup Success!",0, MessageBoxIcon.Information) ;
 
             Application.Restart();
 

@@ -165,7 +165,7 @@ namespace DualSenseAT
             if (!Functions.UIFunctions.isDSXRunning())
             {
                 StatusLED.BackColor = Color.Red;
-                StatusLbl.Text = "DualSenseX is closed!";
+                StatusLbl.Text = "DSX is closed!";
                 return;
             }
 
@@ -174,7 +174,7 @@ namespace DualSenseAT
             if (!Functions.NetworkServices.CheckAvailableServerPort(6969))
             {
                 StatusLED.BackColor = Color.Red;
-                StatusLbl.Text = "UDP Server is not open!";
+                StatusLbl.Text = "UDP Server offline!";
                 return;
             }
 

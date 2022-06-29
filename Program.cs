@@ -50,11 +50,11 @@ namespace DualSenseAT
             //Resolve steamID64
             Functions.apiFunctions.loadSteamData();
 
-            MessageBox.Show(Session.SteamData.UserData.SteamID64);
+            //MessageBox.Show(Session.SteamData.UserData.SteamID64);
 
-             Application.Run(new MainWindowV3());
+             //Application.Run(new MainWindowV3());
             //return for tests
-            return;
+           // return;
 
             var Settings = new IniFile(Constants.TEMP_PATH + "\\DualSenseAT_settings.ini");
             UserPreferences.LANG_CODE = Settings.Read("Lang");
