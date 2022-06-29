@@ -38,12 +38,8 @@ This program uses API created by Paliverse in its DualSenseX project.
 
 To use Adaptive Triggers you need
 
-* Download **DualSenseX-Setup.zip** from Paliverse Github [latest release](https://github.com/Paliverse/DualSenseX/releases/latest).
-     * To install, double-click `DualSenseX-Setup.exe`.
+* Buy and install DSX from [Steam](https://store.steampowered.com/app/1812620/DSX/).
 
-* You need to install the ViGEmBus Driver for it to work:
-     * Download the latest `ViGEmBus` drivers from the [ViGEmBus release page](https://github.com/ViGEm/ViGEmBus/releases/latest).
-     * To install, double-click `ViGEmBus_Setup_{version}.exe` and follow the instructions presented.
     
 After following these steps, you will have DualSenseX, now you need to download DualSenseAT
 * Now download and install DualSenseAT
