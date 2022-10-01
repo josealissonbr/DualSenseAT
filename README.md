@@ -16,6 +16,8 @@
 </p>
 </p>
 
+# About the App
+This project is being redone, with major improvements, please consider making a donation to encourage us!
 
 <div align="center">
   <h3 align="center"></h3>
