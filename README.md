@@ -16,6 +16,9 @@
 </p>
 </p>
 
+###Warning
+This project is being recreated, don't ask me when it will be ready, as I have little free time at the moment
+
 # About the App
 This project is being redone, with major improvements, please consider making a donation to encourage us!
 
