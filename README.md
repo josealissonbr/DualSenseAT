@@ -22,6 +22,9 @@ This project is being recreated, don't ask me when it will be ready, as I have l
 # About the App
 This project is being redone, with major improvements, please consider making a donation to encourage us!
 
+# Obs
+I'm barely having the time and energy to work on this project, feel free to read how it works, and make your own.
+
 <div align="center">
   <h3 align="center"></h3>
 <a href="https://www.paypal.com/donate/?hosted_button_id=N576WTARWPCFC" alt="Contributors">
