@@ -59,7 +59,7 @@ namespace DualSenseAT
             {
                 this.Hide();
                 this.ShowInTaskbar = false;
-                Main2Window mainWindow = new Main2Window();
+                MainWindowV3 mainWindow = new MainWindowV3();
                 mainWindow.Location = this.Location;
                 mainWindow.Show();
             }

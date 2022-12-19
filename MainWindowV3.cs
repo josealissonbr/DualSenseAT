@@ -16,6 +16,7 @@ namespace DualSenseAT
         public MainWindowV3()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.Sizable;
         }
 
         private void MainWindowV3_Load(object sender, EventArgs e)

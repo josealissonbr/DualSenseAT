@@ -127,9 +127,6 @@
     <Reference Include="Guna.UI2">
       <HintPath>dependencies\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="H.MaterialSkin, Version=2.1.10.0, Culture=neutral, PublicKeyToken=b9e9fbe9b6908adc, processorArchitecture=MSIL">
-      <HintPath>packages\H.MaterialSkin.2.1.10\lib\net45\H.MaterialSkin.dll</HintPath>
-    </Reference>
     <Reference Include="InputForm">
       <HintPath>Krypton Dependencies\InputForm.exe</HintPath>
     </Reference>
@@ -259,6 +256,9 @@
     <Reference Include="KryptonWrapLabelExamples">
       <HintPath>Krypton Dependencies\KryptonWrapLabelExamples.exe</HintPath>
     </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="MDIApplication">
       <HintPath>Krypton Dependencies\MDIApplication.exe</HintPath>
     </Reference>
@@ -368,10 +368,12 @@
     <Reference Include="ThreePaneApplicationExtended">
       <HintPath>Krypton Dependencies\ThreePaneApplicationExtended.exe</HintPath>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="UserPageCreation">
       <HintPath>Krypton Dependencies\UserPageCreation.exe</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
     <Reference Include="WorkspaceCellLayout">
       <HintPath>Krypton Dependencies\WorkspaceCellLayout.exe</HintPath>
     </Reference>
@@ -448,6 +450,18 @@
       <DependentUpon>UpdateWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="UserPreferences.cs" />
+    <Compile Include="V2\components\game_icon_fragment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V2\components\game_icon_fragment.Designer.cs">
+      <DependentUpon>game_icon_fragment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Views\dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V2\Views\dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -482,6 +496,12 @@
     <EmbeddedResource Include="UpdateWindow.resx">
       <DependentUpon>UpdateWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="V2\components\game_icon_fragment.resx">
+      <DependentUpon>game_icon_fragment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Views\dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -506,6 +526,47 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dualsense-logo-3AB110CC79-seeklogo.com.ico" />
+    <None Include="Resources\view_more_100px.png1.png" />
+    <None Include="Resources\view_more_100px.png" />
+    <None Include="Resources\tv_show_100px.png1.png" />
+    <None Include="Resources\tv_show_100px.png" />
+    <None Include="Resources\suitcase_100px.png" />
+    <None Include="Resources\start_100px.png" />
+    <None Include="Resources\star_100px.png" />
+    <None Include="Resources\spotify_100px.png" />
+    <None Include="Resources\settings_100px.png1.png" />
+    <None Include="Resources\settings_100px.png" />
+    <None Include="Resources\search_100px.png" />
+    <None Include="Resources\rocket-league.png" />
+    <None Include="Resources\puzzle_100px.png1.png" />
+    <None Include="Resources\puzzle_100px.png" />
+    <None Include="Resources\pinterest_100px.png" />
+    <None Include="Resources\multiple_devices_100px.png1.png" />
+    <None Include="Resources\multiple_devices_100px.png" />
+    <None Include="Resources\module_100px.png" />
+    <None Include="Resources\microsoft_outlook_2019_100px.png" />
+    <None Include="Resources\microsoft_onenote_2019_100px.png" />
+    <None Include="Resources\left_100px.png1.png" />
+    <None Include="Resources\left_100px.png" />
+    <None Include="Resources\instagram_100px.png" />
+    <None Include="Resources\home_100px.png1.png" />
+    <None Include="Resources\home_100px.png" />
+    <None Include="Resources\headphones_100px.png" />
+    <None Include="Resources\Group 3.png" />
+    <None Include="Resources\Group 2.png" />
+    <None Include="Resources\game_controller_100px.png1.png" />
+    <None Include="Resources\game_controller_100px.png" />
+    <None Include="Resources\download_from_the_cloud_100px.png1.png" />
+    <None Include="Resources\download_from_the_cloud_100px.png" />
+    <None Include="Resources\color_palette_100px.png" />
+    <None Include="Resources\buying_100px.png1.png" />
+    <None Include="Resources\buying_100px.png" />
+    <None Include="Resources\black_background.jpg" />
+    <None Include="Resources\apps.png1.png" />
+    <None Include="Resources\apps.png" />
+    <None Include="Resources\adobe_photoshop_100px.png" />
+    <None Include="Resources\517500.png" />
+    <None Include="Resources\2560px-Rocket_League_logo.svg.png" />
     <None Include="ext_assets\search_144px.png" />
     <None Include="Resources\fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg" />
     <None Include="ext_assets\settings_144px.png" />
