@@ -1,4 +1,4 @@
-<h1 align="center">DualSenseAT</h1>
+<h1 align="center">DualSenseAT (Discontinued)</h1>
 <h3 align="center"></h3>
 </p>
 </p>
