@@ -55,7 +55,6 @@ After following these steps, you will have DualSenseX, now you need to download 
 
  
 ## **Supported Games:**
-- Resident Evil 5 (Steam)
 - Euro Truck Simulator 2 (Steam)
 - God Of War
 - Grand Theft Auto V
