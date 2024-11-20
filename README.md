@@ -25,14 +25,6 @@ This project is being redone, with major improvements, please consider making a 
 # Obs
 I'm barely having the time and energy to work on this project, feel free to read how it works, and make your own.
 
-<div align="center">
-  <h3 align="center"></h3>
-<a href="https://www.paypal.com/donate/?hosted_button_id=N576WTARWPCFC" alt="Contributors">
-<img src="https://img.shields.io/badge/PayPal-Support Me-red.svg?style=for-the-badge&color=ffffff&logo=PayPal" /></a>
-  <mark>ㅤ</mark>
-</div>
-</p>
-
 <img src="https://github.com/josealissonbr/DualSenseAT/blob/main/screenshots/v0.1.0.2.png?raw=true" align="center" />
 
 # About the App
